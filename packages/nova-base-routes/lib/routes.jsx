@@ -10,6 +10,10 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import Events from "meteor/nova:events";
 import Helmet from 'react-helmet';
 
+// redux
+import { Provider } from 'react-redux';
+import store from "./store.js";
+
 Telescope.routes.indexRoute = { name: "posts.list", component: Telescope.components.PostsHome };
 
 Meteor.startup(() => {
@@ -21,13 +25,19 @@ Meteor.startup(() => {
     {name:"users.account",  path:"account",            component:Telescope.components.UsersAccount},
     {name:"users.edit",     path:"users/:slug/edit",   component:Telescope.components.UsersAccount}
   ]);
+  
+  const ProvidedApp = (props) => (
+    <Provider store={store}>
+      <Telescope.components.App {...props} />
+    </Provider>
+  );
 
   const AppRoutes = {
     path: '/',
-    component: Telescope.components.App,
+    component: ProvidedApp,
     indexRoute: Telescope.routes.indexRoute,
     childRoutes: Telescope.routes.routes
-  }
+  };
 
   let history;
 
