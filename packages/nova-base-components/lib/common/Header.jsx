@@ -10,8 +10,8 @@ const Header = ({currentUser}) => {
     return (
       <div class="header_2k8Jf">
           <div class="constraintWidth_ZyYbM">
-              <HeaderContent></HeaderContent>
-              <HeaderNavigation></HeaderNavigation>
+              <Telescope.components.HeaderContent></Telescope.components.HeaderContent>
+              <Telescope.components.HeaderNavigation></Telescope.components.HeaderNavigation>
           </div>
       </div>
     )
