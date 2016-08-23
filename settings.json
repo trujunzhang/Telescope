@@ -1,75 +1,4 @@
 {
-  "public": {
-    "title": "Your site title",
-    "tagline":"Your site tagline",
-
-    "logoUrl": "http://placekitten.com/250/80",
-    "logoHeight": "80",
-    "logoWidth": "250",
-    "faviconUrl": "/favicon.ico",
-
-    "requirePostsApproval":false,
-    "requireViewInvite":false,
-    "requirePostInvite":false,
-    "enableNewsletter":true,
-    "autoSubscribe":false,
-    "emailNotifications":true,
-    "postInterval": 20,
-    "RSSLinksPointTo": "link",
-    "commentInterval": 20,
-    "maxPostsPerDay": 10,
-    "startInvitesCount": 5,
-    "postsPerPage": 10,
-
-    "language": "en",
-    "locale": "en",
-
-    "twitterAccount": "foo",
-    "facebookPage": "http://facebook.com/foo",
-
-    "googleAnalyticsId":"123foo"
-  },
-
-
-  "defaultEmail": "hello@world.com",
-  "mailUrl": "smtp://postmaster%40foo.mailgun.org:foo123@smtp.mailgun.org:587/",
-  "scoreUpdateInterval": "30",
-
-  "embedlyKey":"123foo",
-  "mailChimpAPIKey": "123foo",
-  "mailChimpListId": "123foo",
-
-  "categories": [
-    {
-      "name": "Test Category 1",
-      "description": "The first test category",
-      "order": 4,
-      "slug": "testcat1"
-    },
-    {
-      "name": "Test Category 2",
-      "description": "The second test category",
-      "order": 7,
-      "slug": "testcat2"
-    },
-    {
-      "name": "Test Category 3",
-      "description": "The third test category",
-      "order": 10,
-      "slug": "testcat3"
-    }
-  ],
-  "oAuth": {
-    "twitter": {
-      "consumerKey": "foo",
-      "secret": "bar"
-    },
-    "facebook": {
-      "appId": "foo",
-      "secret": "bar"
-    }
-  }
-
   // Server authentication info
   "servers": [
     {
@@ -84,31 +13,23 @@
       "env": {}
     }
   ],
-
   // Install MongoDB on the server. Does not destroy the local MongoDB on future setups
   "setupMongo": true,
-
   // WARNING: Node.js is required! Only skip if you already have Node.js installed on server.
   "setupNode": true,
-
   // WARNING: nodeVersion defaults to 0.10.36 if omitted. Do not use v, just the version number.
   "nodeVersion": "0.10.36",
-
   // Install PhantomJS on the server
   "setupPhantom": true,
-
   // Show a progress bar during the upload of the bundle to the server.
   // Might cause an error in some rare cases if set to true, for instance in Shippable CI
   "enableUploadProgressBar": true,
-
   // Application name (no spaces).
   "appName": "telescope",
-
   // Location of app (local directory). This can reference '~' as the users home directory.
   // i.e., "app": "~/Meteor/my-app",
   // This is the same as the line below.
   "app": "/Users/djzhang/Work/telescope.dev/html",
-
   // Configure environment
   // ROOT_URL must be set to https://YOURDOMAIN.com when using the spiderable package & force SSL
   // your NGINX proxy or Cloudflare. When using just Meteor on SSL without spiderable this is not necessary
@@ -118,7 +39,6 @@
     "MONGO_URL": "mongodb://arunoda:fd8dsjsfh7@hanso.mongohq.com:27017/telescope",
     "MAIL_URL": "smtp://postmaster%40myapp.mailgun.org:adj87sjhd7s@smtp.mailgun.org:587/"
   },
-
   // Meteor Up checks if the app comes online just after the deployment.
   // Before mup checks that, it will wait for the number of seconds configured below.
   "deployCheckWaitTime": 15
