@@ -64,7 +64,7 @@ class HeaderSearchForm extends Component {
                               return (
                                 <li key={key}>
                                     <a href="{item.href}">
-                                        <span class="text_3Wjo0 default_tBeAo base_3CbW2">{item.title}</span>
+                                        <span className="text_3Wjo0 default_tBeAo base_3CbW2">{item.title}</span>
                                     </a>
                                 </li>
                               );
