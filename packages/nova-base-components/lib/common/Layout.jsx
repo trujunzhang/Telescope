@@ -9,10 +9,16 @@ class Layout extends Component {
         this.state = this.initialState = {
             isSearching: false
         };
+        //this.props.onSearchingChanged = this.onSearchingChanged;
+    }
+
+    onSearchingChanged(newState) {
+        this.setState({
+            isSearching: newState
+        });
     }
 
     render() {
-
         return (
           <div className={this.state.isSearching ? 'wrapper search-mode' : 'wrapper'} id="wrapper">
 
@@ -20,7 +26,7 @@ class Layout extends Component {
 
               <Telescope.components.UsersProfileCheck {...this.props} />
 
-              <Telescope.components.Header {...this.props}/>
+              <Telescope.components.Header {...this.props} callbackParent={this.onSearchingChanged}/>
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
 
