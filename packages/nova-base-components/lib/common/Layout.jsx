@@ -12,7 +12,7 @@ class Layout extends Component {
     }
 
     onSearchingChanged(newState) {
-        this.setState({isSearching: newState});
+        this.setState({isSearching: !newState});
     }
 
     render() {
@@ -25,6 +25,7 @@ class Layout extends Component {
 
               <Telescope.components.Header {...this.props} callbackParent={this.onSearchingChanged.bind(this)}/>
 
+              <h1>{this.state.isSearching}</h1>
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
 
               <div className="main">

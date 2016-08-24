@@ -123,12 +123,10 @@ class HeaderSearchForm extends Component {
 
     renderNormalBar() {
         return (
-          <div className="tags_1FTZg" data-test="search-trigger">
+          <div onClick={this.onToggleBar.bind(this)} className="tags_1FTZg" data-test="search-trigger">
               <div className="tagScrollWrapper_2vzLG">
                   <div className="tagWrapper_2hyXS">
-                              <span
-                                onClick={this.onToggleBar.bind(this)}
-                                className="placeholder_KtrAE ellipsis_2lgar text_3Wjo0 subtle_1BWOT base_3CbW2">
+                              <span className="placeholder_KtrAE ellipsis_2lgar text_3Wjo0 subtle_1BWOT base_3CbW2">
                                   Discover your next favorite thing…
                               </span>
                   </div>
