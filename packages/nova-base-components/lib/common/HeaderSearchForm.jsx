@@ -25,7 +25,10 @@ class HeaderSearchForm extends Component {
                   <div className="tags_1FTZg" data-test="search-trigger">
                       <div className="tagScrollWrapper_2vzLG">
                           <div className="tagWrapper_2hyXS">
-                              <span className="placeholder_KtrAE ellipsis_2lgar text_3Wjo0 subtle_1BWOT base_3CbW2">Discover your next favorite thing…</span>
+                              <span
+                                className="placeholder_KtrAE ellipsis_2lgar text_3Wjo0 subtle_1BWOT base_3CbW2">
+                                  Discover your next favorite thing…
+                              </span>
                           </div>
                       </div>
                   </div>
