@@ -6,7 +6,7 @@ class Layout extends Component {
   render() {
 
     return (
-      <div className="wrapper" id="wrapper">
+      <div className="wrapper search-mode" id="wrapper">
 
         <Telescope.components.HeadTags />
 
@@ -14,8 +14,8 @@ class Layout extends Component {
 
         <Telescope.components.Header {...this.props}/>
 
-        <div className="search-mode overlayActive_oQWJ3"></div>
-      
+        <div className="overlayActive_oQWJ3"></div>
+
         <div className="main">
 
           <FlashContainer component={Telescope.components.FlashMessages}/>
@@ -25,9 +25,9 @@ class Layout extends Component {
           {this.props.children}
 
         </div>
-      
+
         <Telescope.components.Footer {...this.props}/>
-      
+
       </div>
     )
 
