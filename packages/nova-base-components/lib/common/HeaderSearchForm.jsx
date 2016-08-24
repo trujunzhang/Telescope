@@ -7,6 +7,13 @@ import {ContextPasser} from "meteor/nova:core";
 import {LinkContainer} from 'react-router-bootstrap';
 import Users from 'meteor/nova:users';
 
+const keyCodes = {
+    ENTER: 13,
+    ESCAPE: 27,
+    UP: 38,
+    DOWN: 40
+};
+
 class HeaderSearchForm extends Component {
 
     constructor(props) {
@@ -26,8 +33,31 @@ class HeaderSearchForm extends Component {
                 {"href": "", "title": "Emojis"},
             ],
             value: '',
-            searching: true
+            searching: false
         };
+    }
+
+    onKeyDown(e) {
+        const key = e.which || e.keyCode;
+        switch (key) {
+            case keyCodes.UP:
+            case keyCodes.DOWN:
+                e.preventDefault();
+                this.scroll(key);
+                break;
+
+            case keyCodes.ENTER:
+                this.search();
+                break;
+
+            case keyCodes.ESCAPE:
+                this.refs.input.blur();
+                break;
+        }
+    }
+
+    onToggleBar() {
+        this.setState({searching: !this.state.searching});
     }
 
     renderBar() {
@@ -43,6 +73,7 @@ class HeaderSearchForm extends Component {
               <div className="tagScrollWrapper_2vzLG">
                   <div className="tagWrapper_2hyXS">
                               <span
+                                onClick={this.onToggleBar.bind(this)}
                                 className="placeholder_KtrAE ellipsis_2lgar text_3Wjo0 subtle_1BWOT base_3CbW2">
                                   Discover your next favorite thing…
                               </span>
@@ -55,8 +86,14 @@ class HeaderSearchForm extends Component {
     renderSearchingBar() {
         return (
           <div>
-              <input autocomplete="off" className="input__gEkP" data-test="search-input" name="q"
-                     placeholder="Discover your next favorite thing…" value=""/>
+              <input
+                ref="input"
+                autocomplete="off"
+                className="input__gEkP"
+                data-test="search-input"
+                name="q"
+                placeholder="Discover your next favorite thing…"
+                value=""/>
               <div className="menu_2lgxg">
                   <div>
                       <ul>
