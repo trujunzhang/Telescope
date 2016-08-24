@@ -9,6 +9,24 @@ import Users from 'meteor/nova:users';
 
 class HeaderNavigation extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            subNavigationItems: [
+                {"href": "/tech", "title": "Tech"},
+                {"href": "/games", "title": "Games"},
+                {"href": "/podcasts", "title": "Podcasts"},
+                {"href": "/books", "title": "Books"},
+                //{"href": "/topics/bots", "title": "Bots"},
+                {"href": "/topics/developer-tools", "title": "Developer Tools"},
+                {"href": "/topics/photography-tools", "title": "Photography Tools"},
+                //{"href": "/topics/pokemon", "title": "Pokemon"},
+                //{"href": "/topics/slack", "title": "Slack"},
+                {"href": "/topics/wearables", "title": "Wearables"},
+            ]
+        }
+    }
+
     render() {
         return (
           <nav class="navigation_1H-Yv text_3Wjo0 subtle_1BWOT base_3CbW2"><a
@@ -17,18 +35,13 @@ class HeaderNavigation extends Component {
                   <div class="gradientLeft_33bxf gradient_fDMJD"></div>
                   <div class="gradientRight_Rp6ob gradient_fDMJD"></div>
                   <ol>
-                      <li><a class="item_1k3Lx" href="/tech">Tech</a></li>
-                      <li><a class="item_1k3Lx" href="/games">Games</a></li>
-                      <li><a class="item_1k3Lx" href="/podcasts">Podcasts</a></li>
-                      <li><a class="item_1k3Lx" href="/books">Books</a></li>
-                      <li><a class="item_1k3Lx" href="/topics/bots">Bots</a></li>
-                      <li><a class="item_1k3Lx" href="/topics/developer-tools">Developer Tools</a></li>
-                      <li><a class="item_1k3Lx" href="/topics/photography-tools">Photography Tools</a></li>
-                      <li><a class="item_1k3Lx" href="/topics/pokemon">Pokemon</a></li>
-                      <li><a class="item_1k3Lx" href="/topics/slack">Slack</a></li>
-                      <li><a class="item_1k3Lx" href="/topics/wearables">Wearables</a></li>
-                      <li><a class="all_P8Pm- item_1k3Lx secondaryText_PM80d default_tBeAo base_3CbW2"
-                             href="/topics">See all</a></li>
+                      {this.state.subNavigationItems.map((menu, key) => {
+                          return (
+                          <li><a class="item_1k3Lx" href="{menu.href}">{menu.title}</a></li>
+                          );
+                      })}
+                      <li><a class="all_P8Pm- item_1k3Lx secondaryText_PM80d default_tBeAo base_3CbW2" href="/topics">See
+                          all</a></li>
                   </ol>
               </div>
               <div class="arrows_3W6MJ"><a class="arrowLeft_2dYJG arrow__5txj" disabled="">
