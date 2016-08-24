@@ -23,7 +23,7 @@ class Layout extends Component {
 
               <Telescope.components.UsersProfileCheck {...this.props} />
 
-              <Telescope.components.Header {...this.props} callbackParent={this.onSearchingChanged}/>
+              <Telescope.components.Header {...this.props} callbackParent={this.onSearchingChanged.bind(this)}/>
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
 
