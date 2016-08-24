@@ -111,8 +111,8 @@ class HeaderSearchForm extends Component {
     }
 
     onToggleBar() {
-        this.props.callbackParent(this.state.searching);
         this.setState({searching: !this.state.searching});
+        this.props.callbackParent(this.state.searching);
     }
 
     renderBar() {
