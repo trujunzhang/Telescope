@@ -37,7 +37,7 @@ class HeaderNavigation extends Component {
                   <ol>
                       {this.state.subNavigationItems.map((menu, key) => {
                           return (
-                            <li><a className="item_1k3Lx" href="{menu.href}">{menu.title}</a></li>
+                            <li key={key}><a className="item_1k3Lx" href="{menu.href}">{menu.title}</a></li>
                           );
                       })}
                       <li>

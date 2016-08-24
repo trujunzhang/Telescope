@@ -62,7 +62,7 @@ class HeaderSearchForm extends Component {
                       <ul>
                           {this.state.suggestions.map((item, key) => {
                               return (
-                                <li>
+                                <li key={key}>
                                     <a href="{item.href}">
                                         <span class="text_3Wjo0 default_tBeAo base_3CbW2">{item.title}</span>
                                     </a>
