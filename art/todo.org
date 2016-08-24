@@ -1,0 +1,3 @@
+* Politicl web server
+
+** Clone the Telescope as the Politicl's template project.
