@@ -107,12 +107,11 @@ class HeaderSearchForm extends Component {
 
     onBlurChanged() {
         this.onToggleBar();
-        //this.setState({isFocused: false, suggestions: []})
     }
 
     onToggleBar() {
-        this.setState({searching: !this.state.searching});
         this.props.callbackParent(this.state.searching);
+        this.setState({searching: !this.state.searching});
     }
 
     renderBar() {
@@ -145,7 +144,7 @@ class HeaderSearchForm extends Component {
                 ref="input"
                 value={this.state.value}
                 onChange={this.onChange.bind(this)}
-                onBlur={() => this.onBlurChanged()}
+                onBlur={this.onBlurChanged.bind(this)}
                 onKeyDown={this.state.suggestions && this.onKeyDown.bind(this)}
                 onFocus={() => this.onFocusChanged()}
                 autocomplete="off"
