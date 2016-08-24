@@ -13,9 +13,9 @@ class HeaderContent extends Component {
         return (
           <div className="headerContent_3umLL centerItems_222KX">
               <div className="headerLeft_1Kke2 centerItems_222KX">
-                  <a class="logo_5Pf3F" href="/">
+                  <a className="logo_5Pf3F" href="/">
                       <span
-                        class="logoIcon_1Mp0b">
+                        className="logoIcon_1Mp0b">
                           <svg width="40" height="40" viewBox="0 0 40 40"
                                xmlns="http://www.w3.org/2000/svg">
                               <g fill="none"

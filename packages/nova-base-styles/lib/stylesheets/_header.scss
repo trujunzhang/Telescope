@@ -39,3 +39,148 @@
   margin-right: 10px;
   width: 100%;
 }
+
+.logo_5Pf3F {
+  height: 34px;
+  margin-right: 10px;
+}
+
+// Header Search Form
+.container_2cR6a {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+.text_3Wjo0 {
+  font-weight: 400;
+}
+
+.text_3Wjo0, .title_2vHSk {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.subtle_1BWOT {
+  color: #999;
+}
+
+.base_3CbW2 {
+  font-family: proxima-nova, Proxima Nova, helvetica, arial, sans-serif;
+  margin: 0;
+}
+
+.searchIcon_3L3Y2 {
+  fill: #999;
+  height: 14px;
+  left: 8px;
+  position: absolute;
+  top: 8px;
+  width: 14px;
+}
+
+.tags_1FTZg {
+  padding-top: 0;
+}
+
+@media (min-width: 769px) {
+  .input__gEkP, .tags_1FTZg {
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+  }
+}
+
+.input__gEkP, .tags_1FTZg {
+  background: #fff;
+  border: 0;
+  box-sizing: border-box;
+  height: 30px;
+  padding: 2px 30px 0 32px;
+  width: 100%;
+}
+
+.tagScrollWrapper_2vzLG {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+  height: 28px;
+}
+
+.tagWrapper_2hyXS {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: 0;
+  color: #fff;
+  cursor: text;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+}
+
+.placeholder_KtrAE {
+  margin-top: 1px;
+  display: block;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.ellipsis_2lgar, .twoLinesClamp_399rK {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis_2lgar {
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.text_3Wjo0 {
+  font-weight: 400;
+}
+
+.text_3Wjo0, .title_2vHSk {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.subtle_1BWOT {
+  color: #999;
+}
+
+.base_3CbW2 {
+  font-family: proxima-nova, Proxima Nova, helvetica, arial, sans-serif;
+  margin: 0;
+}
+
+
+.close_19Ofw {
+  display: none;
+}
+
+.search-mode .close_19Ofw {
+  display: block;
+  background: transparent;
+  right: 8px;
+  border: 0;
+  outline: 0;
+  position: absolute;
+  top: 5px;
+  height: 16px;
+  width: 20px
+}
+
+.close_19Ofw svg {
+  height: 9px;
+  width: 9px;
+  fill: #999
+}
+
+
