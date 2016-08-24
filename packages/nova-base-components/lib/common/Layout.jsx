@@ -14,7 +14,7 @@ class Layout extends Component {
     render() {
 
         return (
-          <div className="wrapper {this.state.isSearching?'search-mode':''}" id="wrapper">
+          <div className={this.state.isSearching ? 'wrapper search-mode' : 'wrapper'} id="wrapper">
 
               <Telescope.components.HeadTags />
 
@@ -22,7 +22,7 @@ class Layout extends Component {
 
               <Telescope.components.Header {...this.props}/>
 
-              <div className="{this.state.isSearching?'overlayActive_oQWJ3':'overlayInactive_1UI7W'}"></div>
+              <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
 
               <div className="main">
 
