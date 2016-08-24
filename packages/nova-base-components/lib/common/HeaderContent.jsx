@@ -11,8 +11,9 @@ class HeaderContent extends Component {
 
     render() {
         return (
-          <div class="headerContent_3umLL centerItems_222KX">
-              <div class="headerLeft_1Kke2 centerItems_222KX"><a class="logo_5Pf3F" href="/">
+          <div className="headerContent_3umLL centerItems_222KX">
+              <div className="headerLeft_1Kke2 centerItems_222KX">
+                  <a class="logo_5Pf3F" href="/">
                       <span
                         class="logoIcon_1Mp0b">
                           <svg width="40" height="40" viewBox="0 0 40 40"
@@ -25,10 +26,10 @@ class HeaderContent extends Component {
                                   <path
                                     d="M22.667 20H17v-6h5.667c1.656 0 3 1.343 3 3s-1.344 3-3 3m0-10H13v20h4v-6h5.667c3.866 0 7-3.134 7-7s-3.134-7-7-7"
                                     fill="#FFF"></path>
-                  </g>
-                  </svg>
-                  </span>
-              </a>
+                              </g>
+                          </svg>
+                      </span>
+                  </a>
                   <form class="container_2cR6a" method="GET" action="/search/posts">
                       <label
                         class="text_3Wjo0 subtle_1BWOT base_3CbW2">
