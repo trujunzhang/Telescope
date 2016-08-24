@@ -13,6 +13,8 @@ class Layout extends Component {
         <Telescope.components.UsersProfileCheck {...this.props} />
 
         <Telescope.components.Header {...this.props}/>
+
+        <div className="search-mode overlayActive_oQWJ3"></div>
       
         <div className="main">
 

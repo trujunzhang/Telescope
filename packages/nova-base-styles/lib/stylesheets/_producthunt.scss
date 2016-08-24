@@ -81,3 +81,24 @@
 .secondaryBoldText_1PBCf {
   font-weight: 600
 }
+
+
+//overlay
+
+@media(min-width: 769px) {
+  .overlayActive_oQWJ3 {
+    background-color:rgba(0,0,0,.6);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9998;
+    -webkit-animation: fadein_3W67- .18s;
+    animation: fadein_3W67- .18s
+  }
+}
+
+.overlayInactive_1UI7W {
+  display: block
+}
