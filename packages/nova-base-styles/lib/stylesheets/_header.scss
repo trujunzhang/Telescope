@@ -111,8 +111,7 @@
   font-weight: 400;
 }
 
-
-.input__gEkP,.tags_1FTZg {
+.input__gEkP, .tags_1FTZg {
   background: #fff;
   border: 0;
   box-sizing: border-box;
@@ -122,24 +121,24 @@
 }
 
 @media(max-width: 768px) {
-  .input__gEkP,.tags_1FTZg {
-    font-size:16px
+  .input__gEkP, .tags_1FTZg {
+    font-size: 16px
   }
 }
 
-.input__gEkP::-ms-clear,.tags_1FTZg::-ms-clear {
+.input__gEkP::-ms-clear, .tags_1FTZg::-ms-clear {
   display: none
 }
 
-.input__gEkP::-webkit-input-placeholder,.tags_1FTZg::-webkit-input-placeholder {
+.input__gEkP::-webkit-input-placeholder, .tags_1FTZg::-webkit-input-placeholder {
   color: #999
 }
 
-.input__gEkP::-moz-placeholder,.tags_1FTZg::-moz-placeholder {
+.input__gEkP::-moz-placeholder, .tags_1FTZg::-moz-placeholder {
   color: #999
 }
 
-.input__gEkP:-ms-input-placeholder,.tags_1FTZg:-ms-input-placeholder {
+.input__gEkP:-ms-input-placeholder, .tags_1FTZg:-ms-input-placeholder {
   color: #999
 }
 
@@ -147,17 +146,16 @@
 //  color: #999
 //}
 
-.input__gEkP:focus,.tags_1FTZg:focus {
+.input__gEkP:focus, .tags_1FTZg:focus {
   outline: 0
 }
 
 @media(min-width: 769px) {
-  .input__gEkP,.tags_1FTZg {
-    border:1px solid #f2f2f2;
+  .input__gEkP, .tags_1FTZg {
+    border: 1px solid #f2f2f2;
     border-radius: 3px
   }
 }
-
 
 .searchIcon_3L3Y2 {
   fill: #999;
@@ -167,7 +165,6 @@
   top: 8px;
   width: 14px;
 }
-
 
 // Search Form
 .tags_1FTZg {
@@ -464,4 +461,73 @@ a.menuLink_1h9ZN:hover {
 .arrow__5txj[disabled] {
   cursor: initial;
   opacity: .5
+}
+
+// Search bar suggestion menu list
+.menu_2lgxg {
+  background-color: #fff;
+  border-radius-bottom: 3px;
+  border: 1px solid #f2f2f2;
+  border-top: 0;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 20px;
+  position: absolute;
+  top: 29px;
+  width: 100%;
+  z-index: 9999
+}
+
+@media(max-width: 768px) {
+  .menu_2lgxg {
+    top: 39px
+  }
+}
+
+.menu_2lgxg ul {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+.menu_2lgxg li {
+  margin-bottom: 10px
+}
+
+.menu_2lgxg li a {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  width: 100%
+}
+
+@media(min-width: 769px) {
+  .menu_2lgxg li a:hover {
+    text-decoration: none
+  }
+}
+
+.menu_2lgxg .selected_3aUuN, .menu_2lgxg li:hover {
+  background-color: #f2f2f2
+}
+
+.footer_LIeld {
+  cursor: pointer
+}
+
+@media(min-width: 769px) {
+  .footer_LIeld a:hover {
+    text-decoration: none;
+    cursor: pointer
+  }
+}
+
+.hint_3pAqW {
+  padding: 10px
+}
+
+@media(max-width: 768px) {
+  .hint_3pAqW {
+    display: none
+  }
 }

@@ -17,7 +17,14 @@ class HeaderSearchForm extends Component {
         this.state = this.initialState = {
             highlightedItem: -1,
             searchTerm: '',
-            suggestions: [],
+            suggestions: [
+                {"href": "", "title": "Slack"},
+                {"href": "", "title": "Bots"},
+                {"href": "", "title": "Mac Apps"},
+                {"href": "", "title": "Productivity"},
+                {"href": "", "title": "Developer Tools"},
+                {"href": "", "title": "Emojis"},
+            ],
             value: '',
             searching: true
         };
@@ -48,27 +55,24 @@ class HeaderSearchForm extends Component {
     renderSearchingBar() {
         return (
           <div>
-              <input autocomplete="off" class="input__gEkP" data-test="search-input" name="q"
+              <input autocomplete="off" className="input__gEkP" data-test="search-input" name="q"
                      placeholder="Discover your next favorite thing…" value=""/>
-              <div class="menu_2lgxg">
+              <div className="menu_2lgxg">
                   <div>
                       <ul>
-                          <li><a href="https://www.producthunt.com/search/posts?q=Slack"><span
-                            class="text_3Wjo0 default_tBeAo base_3CbW2">Slack</span></a></li>
-                          <li><a href="https://www.producthunt.com/search/posts?q=Bots"><span
-                            class="text_3Wjo0 default_tBeAo base_3CbW2">Bots</span></a></li>
-                          <li><a href="https://www.producthunt.com/search/posts?q=Mac%20Apps"><span
-                            class="text_3Wjo0 default_tBeAo base_3CbW2">Mac Apps</span></a></li>
-                          <li><a href="https://www.producthunt.com/search/posts?q=Productivity"><span
-                            class="text_3Wjo0 default_tBeAo base_3CbW2">Productivity</span></a></li>
-                          <li><a href="https://www.producthunt.com/search/posts?q=Developer%20Tools"><span
-                            class="text_3Wjo0 default_tBeAo base_3CbW2">Developer Tools</span></a></li>
-                          <li><a href="https://www.producthunt.com/search/posts?q=Emojis"><span
-                            class="text_3Wjo0 default_tBeAo base_3CbW2">Emojis</span></a></li>
+                          {this.state.suggestions.map((item, key) => {
+                              return (
+                                <li>
+                                    <a href="{item.href}">
+                                        <span class="text_3Wjo0 default_tBeAo base_3CbW2">{item.title}</span>
+                                    </a>
+                                </li>
+                              );
+                          })}
                       </ul>
                   </div>
-                  <div class="footer_LIeld">
-                      <span class="hint_3pAqW secondaryText_PM80d subtle_1BWOT base_3CbW2">Press enter to see all results</span>
+                  <div className="footer_LIeld">
+                      <span className="hint_3pAqW secondaryText_PM80d subtle_1BWOT base_3CbW2">Press enter to see all results</span>
                   </div>
               </div>
           </div>
