@@ -90,7 +90,7 @@ class HeaderSearchForm extends Component {
         const searchTerm = this.normalizeInput();
         if (!searchTerm) return;
         new Promise((resolve) => {
-            this.props.onChange(searchTerm, resolve);
+            //this.props.onChange(searchTerm, resolve);
         }).then((suggestions) => {
             if (!this.state.value) return;
             this.setState({
@@ -99,6 +99,15 @@ class HeaderSearchForm extends Component {
                 //suggestions
             });
         });
+    }
+
+    onFocusChanged(fourced) {
+
+    }
+
+    onBlurChanged() {
+        this.onToggleBar();
+        this.setState({isFocused: false, suggestions: []})
     }
 
     onToggleBar() {
@@ -135,9 +144,9 @@ class HeaderSearchForm extends Component {
                 ref="input"
                 value={this.state.value}
                 onChange={this.onChange.bind(this)}
-                onBlur={() => this.setState({isFocused: false, suggestions: []})}
+                onBlur={() => this.onBlurChanged()}
                 onKeyDown={this.state.suggestions && this.onKeyDown.bind(this)}
-                onFocus={() => this.setState({isFocused: true})}
+                onFocus={() => this.onFocusChanged()}
                 autocomplete="off"
                 className="input__gEkP"
                 data-test="search-input"
