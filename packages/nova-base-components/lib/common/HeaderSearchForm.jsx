@@ -19,7 +19,7 @@ class HeaderSearchForm extends Component {
             searchTerm: '',
             suggestions: [],
             value: '',
-            searching: false
+            searching: true
         };
     }
 
