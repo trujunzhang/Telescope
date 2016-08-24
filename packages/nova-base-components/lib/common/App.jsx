@@ -44,7 +44,7 @@ App.propTypes = {
   actions: React.PropTypes.object,
   events: React.PropTypes.object,
   messages: React.PropTypes.object,
-}
+};
 
 App.childContextTypes = {
   currentUser: React.PropTypes.object,
@@ -52,7 +52,7 @@ App.childContextTypes = {
   events: React.PropTypes.object,
   messages: React.PropTypes.object,
   intl: intlShape
-}
+};
 
 module.exports = AppComposer(App);
 export default AppComposer(App);
