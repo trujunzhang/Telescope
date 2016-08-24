@@ -107,7 +107,7 @@ class HeaderSearchForm extends Component {
 
     onBlurChanged() {
         this.onToggleBar();
-        this.setState({isFocused: false, suggestions: []})
+        //this.setState({isFocused: false, suggestions: []})
     }
 
     onToggleBar() {
