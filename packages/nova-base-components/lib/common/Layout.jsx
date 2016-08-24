@@ -1,37 +1,45 @@
-import React, { PropTypes, Component } from 'react';
-import { FlashContainer } from "meteor/nova:core";
+import React, {PropTypes, Component} from 'react';
+import {FlashContainer} from "meteor/nova:core";
 
 class Layout extends Component {
 
-  render() {
+    constructor(props) {
+        super(props);
+        //<div className="search-mode overlayActive_oQWJ3"></div>
+        this.state = this.initialState = {
+            isSearching: false
+        };
+    }
 
-    return (
-      <div className="wrapper search-mode" id="wrapper">
+    render() {
 
-        <Telescope.components.HeadTags />
+        return (
+          <div className="wrapper {this.state.isSearching?'search-mode':''}" id="wrapper">
 
-        <Telescope.components.UsersProfileCheck {...this.props} />
+              <Telescope.components.HeadTags />
 
-        <Telescope.components.Header {...this.props}/>
+              <Telescope.components.UsersProfileCheck {...this.props} />
 
-        <div className="overlayActive_oQWJ3"></div>
+              <Telescope.components.Header {...this.props}/>
 
-        <div className="main">
+              <div className="{this.state.isSearching?'overlayActive_oQWJ3':'overlayInactive_1UI7W'}"></div>
 
-          <FlashContainer component={Telescope.components.FlashMessages}/>
+              <div className="main">
 
-          <Telescope.components.Newsletter />
+                  <FlashContainer component={Telescope.components.FlashMessages}/>
 
-          {this.props.children}
+                  <Telescope.components.Newsletter />
 
-        </div>
+                  {this.props.children}
 
-        <Telescope.components.Footer {...this.props}/>
+              </div>
 
-      </div>
-    )
+              <Telescope.components.Footer {...this.props}/>
 
-  }
+          </div>
+        )
+
+    }
 }
 
 Layout.displayName = "Layout";
