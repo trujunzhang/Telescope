@@ -1,0 +1,27 @@
+// Common styles
+.base_3CbW2 {
+  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  margin: 0
+}
+
+.base_3CbW2 h1, .base_3CbW2 h2, .base_3CbW2 h3, .base_3CbW2 h4, .base_3CbW2 h5, .base_3CbW2 h6, .base_3CbW2 p {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0
+}
+
+.base_3CbW2 a {
+  color: inherit;
+}
+
+@media(max-width: 768px) {
+  .base_3CbW2 a, a.base_3CbW2 {
+    font-weight: 600
+  }
+}
+
+@media(min-width: 769px) {
+  .base_3CbW2 a:hover, a.base_3CbW2:hover {
+    text-decoration: underline
+  }
+}
