@@ -2,6 +2,7 @@
 
 Telescope.registerComponent("App",                  require('./common/App.jsx'));
 Telescope.registerComponent("Footer",               require('./common/Footer.jsx'));
+Telescope.registerComponent("HeaderSearchForm",     require('./common/HeaderSearchForm.jsx'));
 Telescope.registerComponent("HeaderContent",        require('./common/HeaderContent.jsx'));
 Telescope.registerComponent("HeaderNavigation",     require('./common/HeaderNavigation.jsx'));
 Telescope.registerComponent("Header",               require('./common/Header.jsx'));
