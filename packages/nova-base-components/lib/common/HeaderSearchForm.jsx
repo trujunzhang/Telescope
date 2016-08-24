@@ -52,8 +52,53 @@ class HeaderSearchForm extends Component {
 
             case keyCodes.ESCAPE:
                 this.refs.input.blur();
+                self.onToggleBar();
                 break;
         }
+    }
+
+    scroll(key) {
+        const {highlightedItem: item, suggestions} = this.state;
+        const lastItem = suggestions.length - 1;
+        let nextItem;
+
+        if (key === keyCodes.UP) {
+            nextItem = (item <= 0) ? lastItem : item - 1;
+        } else {
+            nextItem = (item === lastItem) ? 0 : item + 1;
+        }
+
+        this.setState({
+            highlightedItem: nextItem,
+            value: suggestions[nextItem]
+        });
+    }
+
+    onChange(e) {
+        clearTimeout(this.timer);
+        const input = e.target.value;
+        if (!input) return this.setState(this.initialState);
+        this.setState({value: input});
+        this.timer = setTimeout(() => this.autosuggest(), this.props.delay);
+    }
+
+    normalizeInput() {
+        return this.state.value.toLowerCase().trim();
+    }
+
+    autosuggest() {
+        const searchTerm = this.normalizeInput();
+        if (!searchTerm) return;
+        new Promise((resolve) => {
+            this.props.onChange(searchTerm, resolve);
+        }).then((suggestions) => {
+            if (!this.state.value) return;
+            this.setState({
+                highlightedItem: -1,
+                searchTerm,
+                //suggestions
+            });
+        });
     }
 
     onToggleBar() {
@@ -88,12 +133,17 @@ class HeaderSearchForm extends Component {
           <div>
               <input
                 ref="input"
+                value={this.state.value}
+                onChange={this.onChange.bind(this)}
+                onBlur={() => this.setState({isFocused: false, suggestions: []})}
+                onKeyDown={this.state.suggestions && this.onKeyDown.bind(this)}
+                onFocus={() => this.setState({isFocused: true})}
                 autocomplete="off"
                 className="input__gEkP"
                 data-test="search-input"
                 name="q"
                 placeholder="Discover your next favorite thing…"
-                value=""/>
+              />
               <div className="menu_2lgxg">
                   <div>
                       <ul>
