@@ -63,7 +63,7 @@
 }
 
 .base_3CbW2 {
-  font-family: proxima-nova, Proxima Nova, helvetica, arial, sans-serif;
+  font-family: 'Montserrat', helvetica, arial, sans-serif;
   margin: 0;
 }
 
@@ -138,22 +138,28 @@
   white-space: nowrap;
 }
 
+.ellipsis_2lgar {
+  white-space: nowrap;
+  word-wrap: normal
+}
+
+.ellipsis_2lgar, .twoLinesClamp_399rK {
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
 .placeholder_KtrAE {
   margin-top: 1px;
   display: block;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
-  align-self: center;
+  align-self: center
 }
 
-.ellipsis_2lgar, .twoLinesClamp_399rK {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.ellipsis_2lgar {
-  white-space: nowrap;
-  word-wrap: normal;
+@media(max-width: 768px) {
+  .placeholder_KtrAE {
+    max-width: 70px
+  }
 }
 
 .close_19Ofw {
@@ -178,4 +184,57 @@
   fill: #999
 }
 
+// login on the right
 
+.menuLink_1h9ZN {
+  line-height: 0;
+  padding: 5px 6px;
+  color: #999
+}
+
+a.menuLink_1h9ZN:hover {
+  color: #da552f
+}
+
+.menuLink_1h9ZN path {
+  fill: #999
+}
+
+@media(min-width: 769px) {
+  .menuLink_1h9ZN:hover path {
+    fill: #da552f
+  }
+}
+
+.metaMenu_3AKjk {
+  display: block
+}
+
+.metaMenu_3AKjk svg {
+  height: 3px;
+  width: 15px
+}
+
+.secondaryText_PM80d {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .6px;
+  line-height: 16px;
+  text-transform: uppercase
+}
+
+.secondaryBoldText_1PBCf {
+  font-weight: 600
+}
+
+@media(min-width: 769px) {
+  a.login_258vb:hover {
+    text-decoration: none;
+    color: #da552f
+  }
+}
+
+.login_258vb, .userMenu_3flqi {
+  display: block;
+  padding: 3px 0 3px 6px;
+}
