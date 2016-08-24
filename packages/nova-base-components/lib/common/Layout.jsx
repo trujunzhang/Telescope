@@ -9,13 +9,10 @@ class Layout extends Component {
         this.state = this.initialState = {
             isSearching: false
         };
-        //this.props.onSearchingChanged = this.onSearchingChanged;
     }
 
     onSearchingChanged(newState) {
-        this.setState({
-            isSearching: newState
-        });
+        this.setState({isSearching: newState});
     }
 
     render() {
