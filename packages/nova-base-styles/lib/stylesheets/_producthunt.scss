@@ -1,4 +1,5 @@
 // Common styles
+
 .base_3CbW2 {
   font-family: 'Montserrat', helvetica, arial, sans-serif;
   margin: 0
@@ -11,7 +12,7 @@
 }
 
 .base_3CbW2 a {
-  color: inherit;
+  color: inherit
 }
 
 @media(max-width: 768px) {
@@ -24,4 +25,59 @@
   .base_3CbW2 a:hover, a.base_3CbW2:hover {
     text-decoration: underline
   }
+}
+
+.default_tBeAo {
+  color: #000
+}
+
+.subtle_1BWOT {
+  color: #999
+}
+
+.inverse_1CN6F {
+  color: #fff
+}
+
+.headline_azIav {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 34px
+}
+
+.featured_2W7jd {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: .2px;
+  line-height: 24px
+}
+
+.title_2vHSk {
+  font-weight: 600;
+  text-transform: uppercase
+}
+
+.text_3Wjo0, .title_2vHSk {
+  font-size: 14px;
+  line-height: 18px
+}
+
+.text_3Wjo0 {
+  font-weight: 400
+}
+
+.boldText_3B8fa {
+  font-weight: 600
+}
+
+.secondaryText_PM80d {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .6px;
+  line-height: 16px;
+  text-transform: uppercase
+}
+
+.secondaryBoldText_1PBCf {
+  font-weight: 600
 }
