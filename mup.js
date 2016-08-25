@@ -1,17 +1,22 @@
 module.exports = {
+
   servers: {
     one: {
-      host: '1.2.3.4',
-      username: 'root'
-      // pem:
-      // password:
-      // or leave blank for authenticate from ssh-agent
+      "host": "139.59.11.152",
+      "username": "deploy",
+      "password": "k3CPG6sdNXeBL6",
+      // or pem file (ssh based authentication)
+      //"pem": "~/.ssh/id_rsa",
+      // Also, for non-standard ssh port use this
+      //"sshOptions": { "port" : 49154 },
+      // server specific environment variables
+      "env": {}
     }
   },
 
   meteor: {
-    name: 'app',
-    path: '../app',
+    name: 'politicl',
+    path: '.',
     servers: {
       one: {}
     },
@@ -19,8 +24,8 @@ module.exports = {
       serverOnly: true,
     },
     env: {
-      ROOT_URL: 'app.com',
-      MONGO_URL: 'mongodb://localhost/meteor'
+      "ROOT_URL": "http://localhost",
+      "MONGO_URL": "mongodb://139.59.11.152:27017/telescope"
     },
 
     //dockerImage: 'kadirahq/meteord'
