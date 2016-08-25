@@ -6,3 +6,5 @@ Therefore, we will create a new system user specifically for that purpose:
 
 adduser --disabled-login politicl
 
+
+meteor build .
