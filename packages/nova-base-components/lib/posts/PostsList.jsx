@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+
+
 const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loadMore, showHeader = true}) => {
 
   // console.log(results);
