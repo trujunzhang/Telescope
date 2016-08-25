@@ -25,7 +25,7 @@ Meteor.startup(() => {
     component: Telescope.components.App,
     indexRoute: Telescope.routes.indexRoute,
     childRoutes: Telescope.routes.routes
-  }
+  };
 
   let history;
 
@@ -44,7 +44,7 @@ Meteor.startup(() => {
   serverOptions.htmlHook = (html) => {
     const head = Helmet.rewind();
     return html.replace('<head>', '<head>'+ head.title + head.meta + head.link);    
-  }
+  };
   
   // ReactRouterSSR.Run(AppRoutes, {historyHook: () => history}, {historyHook: () => history});
   ReactRouterSSR.Run(AppRoutes, clientOptions, serverOptions);
