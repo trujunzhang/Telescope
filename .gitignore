@@ -47,4 +47,7 @@ jsdoc-conf.json
 jsdoc.json
 
 
+mup.js
+mup.json
+
 *.tar.gz
