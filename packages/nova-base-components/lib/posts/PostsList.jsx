@@ -31,33 +31,35 @@ const renderNoResults = (showHeader) => {
  * @param count
  * @param totalCount
  * @param loadMore
- * @param showHeader
  * @returns {XML}
  */
-const renderPostsList = (results, currentUser, hasMore, ready, count, totalCount, loadMore, showHeader) => {
+const renderPostsList = ({results, currentUser, hasMore, ready, count, totalCount, loadMore}) => {
     return (
-      <div className="content_1jnXo">
-          <section className="results_37tfm">
-              <div>
-                  <div className="fullWidthBox_3Dggh box_c4OJj">
-                      <div className="content_DcBqe">
-                          <Telescope.components.PostsListTitle/>
-                          {results.map(post => <Telescope.components.PostsItem post={post}
-                                                                               currentUser={currentUser}
-                                                                               key={post._id}/>)}
-                          {hasMore ? (ready ?
-                            <Telescope.components.PostsLoadMore loadMore={loadMore} count={count}
-                                                                totalCount={totalCount}/> :
-                            <Telescope.components.PostsLoading/>) : <Telescope.components.PostsNoMore/>}
+      <div>
+          <div className="fullWidthBox_3Dggh box_c4OJj">
+              <div className="content_DcBqe">
+                  <Telescope.components.PostsListTitle/>
+                  {results.map(post => <Telescope.components.PostsItem post={post}
+                                                                       currentUser={currentUser}
+                                                                       key={post._id}/>)}
+                  {hasMore ? (ready ?
+                    <Telescope.components.PostsLoadMore loadMore={loadMore} count={count}
+                                                        totalCount={totalCount}/> :
+                    <Telescope.components.PostsLoading/>) : <Telescope.components.PostsNoMore/>}
 
-                      </div>
-                  </div>
               </div>
-          </section>
-          <div className="sidebar_Y2LGQ">
           </div>
       </div>
     )
+}
+const renderLeftPanel = ({results, currentUser, hasMore, ready, count, totalCount, loadMore}) => {
+    //if (!!results.length) {
+    return renderPostsList(results, currentUser, hasMore, ready, count, totalCount, loadMore);
+    //} else if (!ready) {
+    //return renderLoading(showHeader);
+    //} else {
+    //    return renderNoResults(showHeader);
+    //}
 }
 
 const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loadMore, showHeader = true}) => {
@@ -68,13 +70,16 @@ const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loa
     // console.log(totalCount);
     // console.log(count);
 
-    //if (!!results.length) {
-    //    return renderPostsList(results, currentUser, hasMore, ready, count, totalCount, loadMore, showHeader = true);
-    //} else if (!ready) {
-    return renderLoading(showHeader);
-    //} else {
-    //    return renderNoResults(showHeader);
-    //}
+    return (
+      <div className="content_1jnXo">
+          <section className="results_37tfm">
+              {renderLeftPanel(results, currentUser, hasMore, ready, count, totalCount, loadMore)}
+          </section>
+          <div className="sidebar_Y2LGQ">
+
+          </div>
+      </div>
+    )
 
 };
 
