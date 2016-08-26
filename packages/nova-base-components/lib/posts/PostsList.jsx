@@ -49,18 +49,13 @@ const renderPostsList = (results, currentUser, hasMore, ready, count, totalCount
                                   <span style="font-style: normal; font-weight: normal;">
                                       <span className="title_38djq featured_2W7jd default_tBeAo base_3CbW2">Today</span>
                                   </span>
-                                  <div className="toggle_Tx6Vy">
-                                      <a className="secondaryText_PM80d default_tBeAo base_3CbW2" href="/">Popular</a>
-                                      <a className="secondaryText_PM80d subtle_1BWOT base_3CbW2"
-                                         href="/newest">Newest</a>
-                                  </div>
+
                               </div>
 
-                              <div className="posts-list-content">
-                                  {results.map(post => <Telescope.components.PostsItem post={post}
-                                                                                       currentUser={currentUser}
-                                                                                       key={post._id}/>)}
-                              </div>
+
+                              {results.map(post => <Telescope.components.PostsItem post={post}
+                                                                                   currentUser={currentUser}
+                                                                                   key={post._id}/>)}
                               {hasMore ? (ready ?
                                 <Telescope.components.PostsLoadMore loadMore={loadMore} count={count}
                                                                     totalCount={totalCount}/> :
