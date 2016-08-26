@@ -2,11 +2,8 @@ import React from 'react';
 
 const renderLoading = (showHeader)=> {
     return (
-      <div className="posts-list">
-          {showHeader ? <Telescope.components.PostsListHeader /> : null}
-          <div className="posts-list-content">
-              <Telescope.components.PostsLoading/>
-          </div>
+      <div>
+          <span className="loading_2hQxH featured_2W7jd subtle_1BWOT base_3CbW2">Hunting down posts...</span>
       </div>
     )
 }
@@ -71,13 +68,13 @@ const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loa
     // console.log(totalCount);
     // console.log(count);
 
-    if (!!results.length) {
-        return renderPostsList(results, currentUser, hasMore, ready, count, totalCount, loadMore, showHeader = true);
-    } else if (!ready) {
-        return renderLoading(showHeader);
-    } else {
-        return renderNoResults(showHeader);
-    }
+    //if (!!results.length) {
+    //    return renderPostsList(results, currentUser, hasMore, ready, count, totalCount, loadMore, showHeader = true);
+    //} else if (!ready) {
+    return renderLoading(showHeader);
+    //} else {
+    //    return renderNoResults(showHeader);
+    //}
 
 };
 
