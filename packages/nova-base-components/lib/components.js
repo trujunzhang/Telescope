@@ -33,6 +33,7 @@ Telescope.registerComponent("PostsItem",            require('./posts/PostsItem.j
 Telescope.registerComponent("PostsLoading",         require('./posts/PostsLoading.jsx'));
 Telescope.registerComponent("PostsViews",           require('./posts/PostsViews.jsx'));
 Telescope.registerComponent("PostsList",            require('./posts/PostsList.jsx'));
+Telescope.registerComponent("PostsInfiniteList",    require('./posts/PostsInfiniteList.jsx'));
 Telescope.registerComponent("PostsListTitle",       require('./posts/PostsListTitle.jsx'));
 Telescope.registerComponent("PostsListHeader",      require('./posts/PostsListHeader.jsx'));
 Telescope.registerComponent("PostsCategories",      require('./posts/PostsCategories.jsx'));

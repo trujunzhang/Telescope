@@ -73,7 +73,7 @@ const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loa
     return (
       <div className="content_1jnXo">
           <section className="results_37tfm">
-              {renderLeftPanel(results, currentUser, hasMore, ready, count, totalCount, loadMore)}
+              <Telescope.components.PostsInfiniteList/>
           </section>
           <div className="sidebar_Y2LGQ">
 
