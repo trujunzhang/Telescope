@@ -82,12 +82,11 @@
   font-weight: 600
 }
 
-
 //overlay
 
 @media(min-width: 769px) {
   .overlayActive_oQWJ3 {
-    background-color:rgba(0,0,0,.6);
+    background-color: rgba(0, 0, 0, .6);
     position: absolute;
     top: 50px;
     left: 0;
@@ -102,3 +101,19 @@
 .overlayInactive_1UI7W {
   display: block
 }
+
+// basic layout
+@media (min-width: 769px) {
+  .constraintWidth_ZyYbM {
+    padding: 0 15px;
+  }
+}
+
+.constraintWidth_ZyYbM {
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-width: 350px;
+
+  max-width: 1100px;
+}
+
