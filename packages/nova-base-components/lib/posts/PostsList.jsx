@@ -45,7 +45,7 @@ const renderPostsList = (results, currentUser, hasMore, ready, count, totalCount
                   <div>
                       <div className="fullWidthBox_3Dggh box_c4OJj">
                           <div className="content_DcBqe">
-
+                              <Telescope.components.PostsListTitle/>
                               {results.map(post => <Telescope.components.PostsItem post={post}
                                                                                    currentUser={currentUser}
                                                                                    key={post._id}/>)}
