@@ -34,6 +34,34 @@
   }
 }
 
+.box_c4OJj {
+  margin: 0 0 20px
+}
+
+@media(min-width: 769px) {
+  .box_c4OJj {
+    background: #fff;
+    border: 1px solid #f2f2f2
+  }
+}
+
+@media(min-width: 769px) {
+  .fullWidthBox_3Dggh .header_3GFef {
+    margin: 0 20px
+  }
+}
+
+.fullWidthBox_3Dggh .header_3GFef + .content_DcBqe .placeholder_lYzpv {
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+
+@media(max-width: 768px) {
+  .fullWidthBox_3Dggh .header_3GFef.hideOnSmallScreen_1VjPA + .content_DcBqe .placeholder_lYzpv {
+    margin-top: 0
+  }
+}
+
 // Right panel
 @media(max-width: 1199px) {
   .sidebar_Y2LGQ {
