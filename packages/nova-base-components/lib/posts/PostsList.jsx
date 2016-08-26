@@ -11,14 +11,13 @@ const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loa
     return (
       <div className="content_1jnXo">
           <section className="results_37tfm">
-              <Telescope.components.PostsInfiniteList/>
+              <Telescope.components.PostsInfiniteList results={results}/>
           </section>
           <div className="sidebar_Y2LGQ">
 
           </div>
       </div>
     )
-
 };
 
 PostsList.displayName = "PostsList";

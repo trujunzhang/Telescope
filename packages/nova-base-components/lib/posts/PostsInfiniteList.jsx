@@ -65,7 +65,8 @@ class PostsInfiniteList extends Component {
     }
 
     render() {
-        return this.renderNoResults();
+        //return this.renderPostsList(this.props.results);
+        return this.renderLoading();
         //return (
         //  <div className="header_3GFef">
         //                          <span className="header_title">
