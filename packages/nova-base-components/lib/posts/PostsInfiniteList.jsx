@@ -12,10 +12,8 @@ class PostsInfiniteList extends Component {
 
     renderNoResults() {
         return (
-          <div className="posts-list">
-              <div className="posts-list-content">
-                  <Telescope.components.PostsNoResults/>
-              </div>
+          <div>
+              <span className="loading_2hQxH featured_2W7jd subtle_1BWOT base_3CbW2">No posts to display.</span>
           </div>
         )
     }
@@ -65,6 +63,8 @@ class PostsInfiniteList extends Component {
     //}
 
     render() {
+        let results = [];//this.props.results;
+        let ready = this.props.ready;
         if (!!results.length) {
             return this.renderPostsList(this.props.results, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore);
         } else if (!ready) {
