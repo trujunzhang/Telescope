@@ -11,7 +11,10 @@ const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loa
     return (
       <div className="content_1jnXo">
           <section className="results_37tfm">
-              <Telescope.components.PostsInfiniteList results={results}/>
+              <Telescope.components.PostsInfiniteList results={results} currentUser={currentUser}
+                                                      hasMore={hasMore} ready={ready}
+                                                      count={count} totalCount={totalCount}
+                                                      loadMore={loadMore}/>
           </section>
           <div className="sidebar_Y2LGQ">
 

@@ -34,7 +34,7 @@ class PostsInfiniteList extends Component {
      * @param loadMore
      * @returns {XML}
      */
-    renderPostsList({results, currentUser, hasMore, ready, count, totalCount, loadMore}) {
+    renderPostsList(results, currentUser, hasMore, ready, count, totalCount, loadMore) {
         return (
           <div>
               <div className="fullWidthBox_3Dggh box_c4OJj">
@@ -54,19 +54,27 @@ class PostsInfiniteList extends Component {
         )
     }
 
-    renderLeftPanel({results, currentUser, hasMore, ready, count, totalCount, loadMore}) {
-        //if (!!results.length) {
-        return renderPostsList(results, currentUser, hasMore, ready, count, totalCount, loadMore);
-        //} else if (!ready) {
-        //return renderLoading(showHeader);
-        //} else {
-        //    return renderNoResults(showHeader);
-        //}
-    }
+    //renderLeftPanel(results, currentUser, hasMore, ready, count, totalCount, loadMore) {
+    //    if (!!results.length) {
+    //        return this.renderPostsList(results, currentUser, hasMore, ready, count, totalCount, loadMore);
+    //    } else if (!ready) {
+    //        return this.renderLoading(showHeader);
+    //    } else {
+    //        return this.renderNoResults(showHeader);
+    //    }
+    //}
 
     render() {
-        //return this.renderPostsList(this.props.results);
-        return this.renderLoading();
+        if (!!results.length) {
+            return this.renderPostsList(this.props.results, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore);
+        } else if (!ready) {
+            return this.renderLoading();
+        } else {
+            return this.renderNoResults();
+        }
+
+        //return this.renderPostsList(this.props.results, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore);
+        //return this.renderLoading();
         //return (
         //  <div className="header_3GFef">
         //                          <span className="header_title">
