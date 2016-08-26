@@ -1,6 +1,17 @@
 import React, {PropTypes, Component} from 'react';
 
+import InfiniteScroll from 'react-infinite-scroller'
+
 class PostsInfiniteList extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            posts: this.props.results,
+            currentPage: 1,
+            isLoadingMore: false,
+        }
+    }
 
     /**
      * render the Loading block when fetching the posts.
@@ -60,16 +71,57 @@ class PostsInfiniteList extends Component {
         )
     }
 
-    render() {
-        let results = this.props.results;
-        let ready = this.props.ready;
-        if (!!results.length) {
-            return this.renderPostsList(this.props.results, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore);
-        } else if (!ready) {
-            return this.renderLoading();
-        } else {
-            return this.renderNoResults();
+    loadFunc() {
+        if (this.state.isLoadingMore) {
+            return;
         }
+
+        this.setState({isLoadingMore: true})
+
+        //this.setState({ list: [...this.state.list, ...[newObject]] });
+        let num = this.state.currentPage;
+        let fetchedPosts = Posts.find().fetch();
+        //.map(function (post, index) {
+        //    let id = post._id;
+        //    //post._id = num * 10 + index;
+        //    //post.title = num * 10 + index;
+        //    return post;
+        //})
+        this.setState({
+            posts: [...this.state.posts, ...[fetchedPosts]],
+            currentPage: this.state.currentPage + 1,
+        })
+
+        //setTimeout(() => {
+        //      this.setState({isLoadingMore: false})
+        //  }, 50
+        //);
+    }
+
+    render() {
+        return (
+          <InfiniteScroll
+            threshold={800}
+            pageStart={0}
+            loadMore={this.loadFunc()}
+            hasMore={true}
+            loader={<div className="loader">Loading ...</div>}>
+
+              {this.state.posts.map(post => <Telescope.components.PostsItem post={post}
+                                                                            currentUser={this.props.currentUser}
+                                                                            key={post._id + this.state.currentPage}/>)}
+          </InfiniteScroll>
+        )
+
+        //let results = this.props.results;
+        //let ready = this.props.ready;
+        //if (!!results.length) {
+        //    return this.renderPostsList(this.props.results, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore);
+        //} else if (!ready) {
+        //    return this.renderLoading();
+        //} else {
+        //    return this.renderNoResults();
+        //}
     }
 }
 
