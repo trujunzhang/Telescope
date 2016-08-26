@@ -43,15 +43,16 @@ const renderPostsList = (results, currentUser, hasMore, ready, count, totalCount
           <div className="content_1jnXo">
               <section className="results_37tfm">
                   <div>
-                      <div class="fullWidthBox_3Dggh box_c4OJj">
-                          <div class="content_DcBqe">
-                              <div class="header_3GFef">
+                      <div className="fullWidthBox_3Dggh box_c4OJj">
+                          <div className="content_DcBqe">
+                              <div className="header_3GFef">
                                   <span style="font-style: normal; font-weight: normal;">
-                                      <span class="title_38djq featured_2W7jd default_tBeAo base_3CbW2">Today</span>
+                                      <span className="title_38djq featured_2W7jd default_tBeAo base_3CbW2">Today</span>
                                   </span>
-                                  <div class="toggle_Tx6Vy">
-                                      <a class="secondaryText_PM80d default_tBeAo base_3CbW2" href="/">Popular</a>
-                                      <a class="secondaryText_PM80d subtle_1BWOT base_3CbW2" href="/newest">Newest</a>
+                                  <div className="toggle_Tx6Vy">
+                                      <a className="secondaryText_PM80d default_tBeAo base_3CbW2" href="/">Popular</a>
+                                      <a className="secondaryText_PM80d subtle_1BWOT base_3CbW2"
+                                         href="/newest">Newest</a>
                                   </div>
                               </div>
 
