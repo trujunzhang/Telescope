@@ -2,6 +2,10 @@ import React, {PropTypes, Component} from 'react';
 
 class PostsInfiniteList extends Component {
 
+    /**
+     * render the Loading block when fetching the posts.
+     * @returns {XML}
+     */
     renderLoading() {
         return (
           <div>
@@ -10,6 +14,10 @@ class PostsInfiniteList extends Component {
         )
     }
 
+    /**
+     * Showing no results panel.
+     * @returns {XML}
+     */
     renderNoResults() {
         return (
           <div>
@@ -52,18 +60,8 @@ class PostsInfiniteList extends Component {
         )
     }
 
-    //renderLeftPanel(results, currentUser, hasMore, ready, count, totalCount, loadMore) {
-    //    if (!!results.length) {
-    //        return this.renderPostsList(results, currentUser, hasMore, ready, count, totalCount, loadMore);
-    //    } else if (!ready) {
-    //        return this.renderLoading(showHeader);
-    //    } else {
-    //        return this.renderNoResults(showHeader);
-    //    }
-    //}
-
     render() {
-        let results = [];//this.props.results;
+        let results = this.props.results;
         let ready = this.props.ready;
         if (!!results.length) {
             return this.renderPostsList(this.props.results, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore);
@@ -72,21 +70,6 @@ class PostsInfiniteList extends Component {
         } else {
             return this.renderNoResults();
         }
-
-        //return this.renderPostsList(this.props.results, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore);
-        //return this.renderLoading();
-        //return (
-        //  <div className="header_3GFef">
-        //                          <span className="header_title">
-        //                              <span className="title_38djq featured_2W7jd default_tBeAo base_3CbW2">Today</span>
-        //                          </span>
-        //      <div className="toggle_Tx6Vy">
-        //          <a className="secondaryText_PM80d default_tBeAo base_3CbW2" href="/">Popular</a>
-        //          <a className="secondaryText_PM80d subtle_1BWOT base_3CbW2"
-        //             href="/newest">Newest</a>
-        //      </div>
-        //  </div>
-        //)
     }
 }
 
