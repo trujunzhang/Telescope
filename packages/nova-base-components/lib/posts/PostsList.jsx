@@ -39,28 +39,25 @@ const renderNoResults = (showHeader) => {
  */
 const renderPostsList = (results, currentUser, hasMore, ready, count, totalCount, loadMore, showHeader) => {
     return (
-      <div className="constraintWidth_ZyYbM container_3aBgK">
-          <div className="content_1jnXo">
-              <section className="results_37tfm">
-                  <div>
-                      <div className="fullWidthBox_3Dggh box_c4OJj">
-                          <div className="content_DcBqe">
-                              <Telescope.components.PostsListTitle/>
-                              {results.map(post => <Telescope.components.PostsItem post={post}
-                                                                                   currentUser={currentUser}
-                                                                                   key={post._id}/>)}
-                              {hasMore ? (ready ?
-                                <Telescope.components.PostsLoadMore loadMore={loadMore} count={count}
-                                                                    totalCount={totalCount}/> :
-                                <Telescope.components.PostsLoading/>) : <Telescope.components.PostsNoMore/>}
+      <div className="content_1jnXo">
+          <section className="results_37tfm">
+              <div>
+                  <div className="fullWidthBox_3Dggh box_c4OJj">
+                      <div className="content_DcBqe">
+                          <Telescope.components.PostsListTitle/>
+                          {results.map(post => <Telescope.components.PostsItem post={post}
+                                                                               currentUser={currentUser}
+                                                                               key={post._id}/>)}
+                          {hasMore ? (ready ?
+                            <Telescope.components.PostsLoadMore loadMore={loadMore} count={count}
+                                                                totalCount={totalCount}/> :
+                            <Telescope.components.PostsLoading/>) : <Telescope.components.PostsNoMore/>}
 
-                          </div>
                       </div>
                   </div>
-              </section>
-              <div className="sidebar_Y2LGQ">
-
               </div>
+          </section>
+          <div className="sidebar_Y2LGQ">
           </div>
       </div>
     )
