@@ -10,7 +10,9 @@ class PostsInfiniteList extends Component {
             posts: this.props.results,
             currentPage: 1,
             isLoadingMore: false,
+            hasMoreItems: true,
         }
+        this.loadItems = this.loadItems.bind(this);
     }
 
     /**
@@ -31,9 +33,7 @@ class PostsInfiniteList extends Component {
      */
     renderNoResults() {
         return (
-          <div>
-              <span className="loading_2hQxH featured_2W7jd subtle_1BWOT base_3CbW2">No posts to display.</span>
-          </div>
+          <div><span className="loading_2hQxH featured_2W7jd subtle_1BWOT base_3CbW2">No posts to display.</span></div>
         )
     }
 
@@ -60,10 +60,7 @@ class PostsInfiniteList extends Component {
                       {results.map(post => <Telescope.components.PostsItem post={post}
                                                                            currentUser={currentUser}
                                                                            key={post._id}/>)}
-                      {hasMore ? (ready ?
-                        <Telescope.components.PostsLoadMore loadMore={loadMore} count={count}
-                                                            totalCount={totalCount}/> :
-                        <Telescope.components.PostsLoading/>) : <Telescope.components.PostsNoMore/>}
+
 
                   </div>
               </div>
@@ -71,7 +68,7 @@ class PostsInfiniteList extends Component {
         )
     }
 
-    loadFunc() {
+    loadItems() {
         if (this.state.isLoadingMore) {
             return;
         }
@@ -90,26 +87,23 @@ class PostsInfiniteList extends Component {
         this.setState({
             posts: [...this.state.posts, ...[fetchedPosts]],
             currentPage: this.state.currentPage + 1,
+            isLoadingMore: false
         })
-
-        //setTimeout(() => {
-        //      this.setState({isLoadingMore: false})
-        //  }, 50
-        //);
     }
 
     render() {
+        const loader = <div><span
+          className="loading_2hQxH featured_2W7jd subtle_1BWOT base_3CbW2">No posts to display.</span></div>
         return (
           <InfiniteScroll
-            threshold={800}
+            threshold={80}
             pageStart={0}
-            loadMore={this.loadFunc()}
-            hasMore={true}
-            loader={<div className="loader">Loading ...</div>}>
+            loadMore={this.loadItems}
+            hasMore={this.state.hasMoreItems}
+            loader={loader}>
 
-              {this.state.posts.map(post => <Telescope.components.PostsItem post={post}
-                                                                            currentUser={this.props.currentUser}
-                                                                            key={post._id + this.state.currentPage}/>)}
+              {this.renderPostsList(this.state.posts, this.props.currentUser, this.props.hasMore, this.props.ready, this.props.count, this.props.totalCount, this.props.loadMore)}
+
           </InfiniteScroll>
         )
 

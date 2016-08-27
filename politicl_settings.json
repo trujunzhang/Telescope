@@ -19,7 +19,7 @@
     "commentInterval": 20,
     "maxPostsPerDay": 10,
     "startInvitesCount": 5,
-    "postsPerPage": 10,
+    "postsPerPage": 2,
 
     "language": "en",
     "locale": "en",
