@@ -103,18 +103,24 @@
 }
 
 // basic layout
-@media (min-width: 769px) {
-  .constraintWidth_ZyYbM {
-    padding: 0 15px;
-  }
-}
-
 .constraintWidth_ZyYbM {
   box-sizing: border-box;
   margin: 0 auto;
   min-width: 350px;
 
   max-width: 1100px;
+}
+
+@media(max-width: 768px) {
+  .constraintWidth_ZyYbM {
+    padding: 0 10px
+  }
+}
+
+@media(min-width: 769px) {
+  .constraintWidth_ZyYbM {
+    padding: 0 15px;
+  }
 }
 
 .box_c4OJj {
