@@ -24,7 +24,7 @@ const getPostsListUsers = posts => {
   userIds = _.unique(userIds);
 
   return Meteor.users.find({_id: {$in: userIds}}, {fields: Users.publishedFields.list});
- 
+
 };
 
 /**
@@ -36,12 +36,12 @@ const getSinglePostUsers = post => {
 
   let users = [post.userId]; // publish post author's ID
 
-  /* 
-  NOTE: to avoid circular dependencies between nova:posts and nova:comments, 
+  /*
+  NOTE: to avoid circular dependencies between nova:posts and nova:comments,
   use callback hook to get comment authors
   */
   users = Telescope.callbacks.run("posts.single.getUsers", users, post);
-  
+
   // add upvoters
   if (post.upvoters && post.upvoters.length) {
     users = users.concat(post.upvoters);
@@ -66,15 +66,15 @@ const getSinglePostUsers = post => {
  */
 Meteor.publish('posts.list', function (terms) {
 
-  // this.unblock(); // causes bug where publication returns 0 results  
+  // this.unblock(); // causes bug where publication returns 0 results
 
   this.autorun(function () {
-    
+
     const currentUser = this.userId && Meteor.users.findOne(this.userId);
 
     terms.currentUserId = this.userId; // add currentUserId to terms
     const {selector, options} = Posts.parameters.get(terms);
-    
+
     Counts.publish(this, terms.listId, Posts.find(selector, options), {noReady: true});
 
     options.fields = Posts.publishedFields.list;
@@ -83,13 +83,13 @@ Meteor.publish('posts.list', function (terms) {
 
     // note: doesn't work yet :(
     // CursorCounts.set(terms, posts.count(), this.connection.id);
-
+    // TODO: djzhang
     const users = Tracker.nonreactive(function () {
       return getPostsListUsers(posts);
     });
 
     return Users.canDo(currentUser, "posts.view.approved.all") ? [posts, users] : [];
-  
+
   });
 
 });
