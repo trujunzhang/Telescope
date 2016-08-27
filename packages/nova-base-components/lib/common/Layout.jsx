@@ -29,7 +29,9 @@ class Layout extends Component {
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
 
               <div >
-                  <FlashContainer component={Telescope.components.FlashMessages}/>
+                  <div className="constraintWidth_ZyYbM container_3aBgK">
+                      <FlashContainer component={Telescope.components.FlashMessages}/>
+                  </div>
 
                   <Telescope.components.Newsletter />
                   <div className="constraintWidth_ZyYbM container_3aBgK">
