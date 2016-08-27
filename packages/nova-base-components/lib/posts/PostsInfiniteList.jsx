@@ -57,9 +57,17 @@ class PostsInfiniteList extends Component {
               <div className="fullWidthBox_3Dggh box_c4OJj">
                   <div className="content_DcBqe">
                       <Telescope.components.PostsListTitle/>
-                      {results.map(post => <Telescope.components.PostsItem post={post}
-                                                                           currentUser={currentUser}
-                                                                           key={post._id}/>)}
+                      <div className="posts_275PF">
+                          <ul className="postsList_2tOc7">
+                              {results.map(post =>
+                                <li>
+                                    <Telescope.components.PostsItem post={post}
+                                                                    currentUser={currentUser}
+                                                                    key={post._id}/>
+                                </li>
+                              )}
+                          </ul>
+                      </div>
                       {hasMore ? (ready ? <Telescope.components.PostsLoadMore loadMore={loadMore} count={count}
                                                                               totalCount={totalCount}/> :
                         <Telescope.components.PostsLoading/>) : <Telescope.components.PostsNoMore/>}
