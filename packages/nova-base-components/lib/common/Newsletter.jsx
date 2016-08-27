@@ -58,24 +58,6 @@ class Newsletter extends Component {
         Cookie.save('showBanner', "no");
     }
 
-    renderHint() {
-        return <div>
-                    <span className="close_1JGKW">
-                    <svg width="12" height="12" viewBox="0 0 12 12"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M6 4.586l4.24-4.24c.395-.395 1.026-.392 1.416-.002.393.393.39 1.024 0 1.415L7.413 6l4.24 4.24c.395.395.392 1.026.002 1.416-.393.393-1.024.39-1.415 0L6 7.413l-4.24 4.24c-.395.395-1.026.392-1.416.002-.393-.393-.39-1.024 0-1.415L4.587 6 .347 1.76C-.05 1.364-.048.733.342.343c.393-.393 1.024-.39 1.415 0L6 4.587z"
-                          fill-rule="evenodd">
-                        </path>
-                    </svg>
-                </span>
-            <span className="welcomeEmoji_3oUs1">👋</span>
-            <span
-              className="welcome_tPFOL boldText_3B8fa text_3Wjo0 default_tBeAo base_3CbW2">Welcome to Product Hunt</span>
-            <span className="tagline_1UlAa text_3Wjo0 subtle_1BWOT base_3CbW2">Get the best new products in your inbox, daily.</span>
-        </div>
-    }
-
     renderButton() {
         return <Telescope.components.NewsletterButton
           successCallback={() => this.successCallbackSubscription()}
@@ -114,7 +96,19 @@ class Newsletter extends Component {
               <div className="fullWidthBox_3Dggh box_c4OJj container_R3fsF">
                   <div className="content_DcBqe">
                       <div className="boxContent_2e30p">
-                          {this.renderHint()}
+                          <span className="close_1JGKW">
+                            <svg width="12" height="12" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M6 4.586l4.24-4.24c.395-.395 1.026-.392 1.416-.002.393.393.39 1.024 0 1.415L7.413 6l4.24 4.24c.395.395.392 1.026.002 1.416-.393.393-1.024.39-1.415 0L6 7.413l-4.24 4.24c-.395.395-1.026.392-1.416.002-.393-.393-.39-1.024 0-1.415L4.587 6 .347 1.76C-.05 1.364-.048.733.342.343c.393-.393 1.024-.39 1.415 0L6 4.587z"
+                                  fill-rule="evenodd">
+                                </path>
+                            </svg>
+                          </span>
+                          <span className="welcomeEmoji_3oUs1">👋</span>
+                          <span
+                            className="welcome_tPFOL boldText_3B8fa text_3Wjo0 default_tBeAo base_3CbW2">Welcome to Product Hunt</span>
+                          <span className="tagline_1UlAa text_3Wjo0 subtle_1BWOT base_3CbW2">Get the best new products in your inbox, daily.</span>
                           {this.context.currentUser ? this.renderButton() : this.renderForm()}
                       </div>
                   </div>
