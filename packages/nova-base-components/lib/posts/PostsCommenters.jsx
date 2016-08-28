@@ -4,9 +4,10 @@ import Posts from "meteor/nova:posts";
 
 const PostsCommenters = ({post}) => {
     return (
-      <a class="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
-         href="/tech/ui-temple">
-          <div class="buttonContainer_wTYxi">
+      <a
+        className="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
+        href="/tech/ui-temple">
+          <div className="buttonContainer_wTYxi">
                     <span>
                         <svg width="12" height="11" viewBox="0 0 12 11"
                              xmlns="http://www.w3.org/2000/svg">
