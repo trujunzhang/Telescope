@@ -46,21 +46,13 @@ class Vote extends Component {
         );
 
         return (
-          <button class="button_2I1re smallSize_1da-r secondaryText_PM80d simpleVariant_1Nl54 button_2n20W"
+          <button className="button_2I1re smallSize_1da-r secondaryText_PM80d simpleVariant_1Nl54 button_2n20W"
                   rel="vote-button" onClick={this.upvote}>
-              <div class="buttonContainer_wTYxi">
-                  <div class="postVoteArrow_2xABl"></div>
+              <div className="buttonContainer_wTYxi">
+                  <div className="postVoteArrow_2xABl"></div>
                   {post.baseScore || 0}
               </div>
           </button>
-
-          //<div className={actionsClass}>
-          //  <a className="upvote-button" onClick={this.upvote}>
-          //    <Telescope.components.Icon name="upvote" />
-          //    <div className="sr-only">Upvote</div>
-          //    <div className="vote-count">{post.baseScore || 0}</div>
-          //  </a>
-          //</div>
         )
     }
 
