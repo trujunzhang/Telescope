@@ -5,10 +5,10 @@
 
 @media(min-width: 769px) {
   .postItem_2pV9v .additionalActionButtons_BoErh {
-    display:none
+    display: none
   }
 
-  .postItem_2pV9v .associations_2dmvY,.postItem_2pV9v:hover .additionalActionButtons_BoErh {
+  .postItem_2pV9v .associations_2dmvY, .postItem_2pV9v:hover .additionalActionButtons_BoErh {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex
@@ -20,12 +20,10 @@
 }
 
 @media(max-width: 768px) {
-  .postItem_2pV9v .annotations_2Ditj,.postItem_2pV9v .associations_2dmvY {
-    display:none
+  .postItem_2pV9v .annotations_2Ditj, .postItem_2pV9v .associations_2dmvY {
+    display: none
   }
 }
-
-
 
 .link_3fUGJ {
   border-bottom: 1px solid #f2f2f2;
@@ -186,6 +184,216 @@ li:last-of-type .link_3fUGJ {
     width: 100%
   }
 }
+
+// Vote
+
+.content_3oLx4 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 30px
+}
+
+.link_3fUGJ:visited .title_2p9fd {
+  color: #999
+}
+
+.meta_2lIV- {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: 25px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: absolute
+}
+
+@media(min-width: 769px) {
+  .meta_2lIV- {
+    left: 130px;
+    right: 25px
+  }
+}
+
+@media(max-width: 768px) {
+  .meta_2lIV- {
+    left: 105px;
+    right: 0
+  }
+}
+
+.actionButtons_2mJsw {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
+}
+
+.actionButtons_2mJsw .button_2n20W {
+  margin-right: 10px;
+}
+
+.actionButtons_2mJsw .button_2n20W:last-child {
+  margin-right: 0
+}
+
+@media(max-width: 768px) {
+  .additionalActionButtons_BoErh .button_2n20W > :last-child {
+    display: none
+  }
+
+  .additionalActionButtons_BoErh .button_2n20W > :first-child {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+  }
+}
+
+.association_pJlhK {
+  border-bottom: 1px solid #f2f2f2
+}
+
+.association_pJlhK:hover {
+  border-bottom: 1px solid #999
+}
+
+a.association_pJlhK:hover {
+  text-decoration: none
+}
+
+.associations_2dmvY {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: auto;
+  white-space: nowrap
+}
+
+.moreAssociations_28e7H {
+  margin-left: .3em
+}
+
+a.moreAssociations_28e7H:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #999
+}
+
+.postsList_2tOc7 {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.simpleVariant_1Nl54 {
+  background: #fff;
+  border-color: #f2f2f2;
+  color: #000;
+  fill: #000
+}
+
+.simpleVariant_1Nl54:hover {
+  background: #f2f2f2
+}
+
+.simpleVariant_1Nl54[disabled] {
+  background: #fafafa;
+  border-color: #ad9090
+}
+
+.simpleVariant_1Nl54.active_2heMV {
+  background: #da552f;
+  border-color: #da552f;
+  color: #fff;
+  fill: #fff
+}
+
+.simpleVariant_1Nl54.active_2heMV:hover {
+  -webkit-filter: #ea532a;
+  filter: rgb(234, 83, 42);
+}
+
+.smallSize_1da-r {
+  height: 24px;
+  padding: 0 8px
+}
+
+.button_2I1re {
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  outline: 0;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none !important
+}
+
+a.button_2I1re:active, button.button_2I1re:active {
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px)
+}
+
+.button_2I1re[disabled] {
+  cursor: not-allowed;
+  opacity: .3
+}
+
+.button_2I1re path {
+  fill: inherit
+}
+
+.buttonContainer_wTYxi {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: inherit
+}
+
+.buttonContainer_wTYxi > span {
+  display: inline
+}
+
+.buttonContainer_wTYxi > span svg {
+  position: relative;
+  top: 2px
+}
+
+.postVoteArrow_2xABl {
+  background-image: url('https://s3.producthunt.com/static/upvote-burst-white.png');
+  background-repeat: no-repeat;
+  background-size: 351px 15px;
+  height: 15px;
+  width: 15px
+}
+
 
 //////////////////////////////////////////////////////
 // Post List                                        //
