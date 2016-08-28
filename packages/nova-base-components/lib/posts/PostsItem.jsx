@@ -37,13 +37,7 @@ class PostsItem extends Component {
         return (
           <div className="meta_2lIV-">
               <div className="actionButtons_2mJsw">
-                  <button className="button_2I1re smallSize_1da-r secondaryText_PM80d simpleVariant_1Nl54 button_2n20W"
-                          rel="vote-button">
-                      <div className="buttonContainer_wTYxi">
-                          <div className="postVoteArrow_2xABl"></div>
-                          270
-                      </div>
-                  </button>
+                  <Telescope.components.Vote post={post} currentUser={this.context.currentUser}/>
                   <a
                     className="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
                     href="/tech/ui-temple">
