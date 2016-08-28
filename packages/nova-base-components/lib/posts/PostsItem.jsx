@@ -33,27 +33,12 @@ class PostsItem extends Component {
         )
     }
 
-    renderActionButtons() {
+    renderActionButtons(post) {
         return (
           <div className="meta_2lIV-">
               <div className="actionButtons_2mJsw">
                   <Telescope.components.Vote post={post} currentUser={this.context.currentUser}/>
-                  <a
-                    className="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
-                    href="/tech/ui-temple">
-                      <div className="buttonContainer_wTYxi">
-                    <span>
-                        <svg width="12" height="11" viewBox="0 0 12 11"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M10.0124802,16.8320558 C9.21033653,16.0515289 8.72727273,15.044941 8.72727273,13.9462121 C8.72727273,11.4655331 11.1897066,9.45454545 14.2272727,9.45454545 C17.2648389,9.45454545 19.7272727,11.4655331 19.7272727,13.9462121 C19.7272727,16.4268911 17.2648389,18.4378788 14.2272727,18.4378788 C13.4722764,18.4378788 12.752811,18.3136428 12.0978565,18.0888377 C11.026169,18.7087928 8.93104025,19.527919 8.93104025,19.527919 C8.93104025,19.527919 9.63175021,17.8427438 10.0124802,16.8320558 Z"
-                              transform="translate(-8 -9)" fill="#FFF" fill-rule="evenodd">
-                        </path>
-                        </svg>
-                    </span>
-                          13
-                      </div>
-                  </a>
+                  {this.renderCommenters()}
                   <div className="additionalActionButtons_BoErh">
                       <a
                         className="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
@@ -77,15 +62,15 @@ class PostsItem extends Component {
                         className="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
                         target="_blank" href="/r/a7b2435b0265fd/74101">
                           <div className="buttonContainer_wTYxi">
-                        <span>
-                        <svg width="10" height="10" viewBox="0 0 10 10"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M5.9816,1.0418 L8.2136,1.0418 L3.8976,5.3578 L4.6426,6.1018 L8.9586,1.7858 L8.9586,4.0188 L9.9996,4.0188 L9.9996,0.5208 C9.9996,0.2228 9.7766,-0.0002 9.4786,-0.0002 L5.9816,-0.0002 L5.9816,1.0418 Z M9,9 L1,9 L1,1 L3.97833252,1 L3.97833252,0 L0.51,0 C0.228,0 0,0.228 0,0.51 L0,9.49 C0,9.772 0.228,10 0.51,10 L9.49,10 C9.772,10 10,9.772 10,9.49 L10,6.02606201 L9,6.02606201 L9,9 Z"
-                              fill="#FFF" fill-rule="evenodd">
-                            </path>
-                        </svg>
-                        </span>
+                            <span>
+                            <svg width="10" height="10" viewBox="0 0 10 10"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M5.9816,1.0418 L8.2136,1.0418 L3.8976,5.3578 L4.6426,6.1018 L8.9586,1.7858 L8.9586,4.0188 L9.9996,4.0188 L9.9996,0.5208 C9.9996,0.2228 9.7766,-0.0002 9.4786,-0.0002 L5.9816,-0.0002 L5.9816,1.0418 Z M9,9 L1,9 L1,1 L3.97833252,1 L3.97833252,0 L0.51,0 C0.228,0 0,0.228 0,0.51 L0,9.49 C0,9.772 0.228,10 0.51,10 L9.49,10 C9.772,10 10,9.772 10,9.49 L10,6.02606201 L9,6.02606201 L9,9 Z"
+                                  fill="#FFF" fill-rule="evenodd">
+                                </path>
+                            </svg>
+                            </span>
                           </div>
                       </a>
                   </div>
@@ -141,7 +126,7 @@ class PostsItem extends Component {
                       </span>
                   </div>
               </a>
-              {this.renderActionButtons()}
+              {this.renderActionButtons(post)}
           </div>
         )
     }
