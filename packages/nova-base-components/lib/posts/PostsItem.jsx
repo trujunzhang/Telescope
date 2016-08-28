@@ -114,8 +114,8 @@ class PostsItem extends Component {
           <div className="postItem_2pV9v" rel="post-item-#74101">
 
               <a className="link_3fUGJ" href="/tech/ui-temple">
-                  <div className="post-thumbnail thumbnail_JX64A">
-                      <div className="container_22rD3">
+                  <div className="post-thumbnail thumbnail_JX64A thumbnail">
+                      <div className="container_22rD3 thumbnail">
                           {post.thumbnailUrl ? <Telescope.components.PostsThumbnail post={post}/> : null}
                       </div>
                   </div>
