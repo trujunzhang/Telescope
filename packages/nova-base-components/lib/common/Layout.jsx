@@ -5,14 +5,13 @@ class Layout extends Component {
 
     constructor(props) {
         super(props);
-        //<div className="search-mode overlayActive_oQWJ3"></div>
+    }
+
+    componentWillMount() {
+        this.context.messages.layout = this;
         this.state = this.initialState = {
             isSearching: false
         };
-    }
-
-    onSearchingChanged(newState) {
-        this.setState({isSearching: !newState});
     }
 
     render() {
@@ -23,9 +22,8 @@ class Layout extends Component {
 
               <Telescope.components.UsersProfileCheck {...this.props} />
 
-              <Telescope.components.Header {...this.props} callbackParent={this.onSearchingChanged.bind(this)}/>
+              <Telescope.components.Header {...this.props} />
 
-              <h1>{this.state.isSearching}</h1>
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
 
               <div >
@@ -47,6 +45,10 @@ class Layout extends Component {
 
     }
 }
+
+Layout.contextTypes = {
+    messages: React.PropTypes.object
+};
 
 Layout.displayName = "Layout";
 

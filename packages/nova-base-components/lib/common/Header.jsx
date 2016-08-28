@@ -1,7 +1,7 @@
 import React from 'react';
 //import { Messages } from "meteor/nova:core";
 
-const Header = ({currentUser, callbackParent}) => {
+const Header = ({currentUser}) => {
 
     const logoUrl = Telescope.settings.get("logoUrl");
     const siteTitle = Telescope.settings.get("title", "Nova");
@@ -10,7 +10,7 @@ const Header = ({currentUser, callbackParent}) => {
     return (
       <div className="header_2k8Jf">
           <div className="constraintWidth_ZyYbM">
-              <Telescope.components.HeaderContent callbackParent={callbackParent}/>
+              <Telescope.components.HeaderContent />
               <Telescope.components.HeaderNavigation/>
           </div>
       </div>

@@ -30,7 +30,7 @@ class HeaderContent extends Component {
                           </svg>
                       </span>
                   </a>
-                  <Telescope.components.HeaderSearchForm callbackParent={this.props.callbackParent}/>
+                  <Telescope.components.HeaderSearchForm />
               </div>
               <div className="headerRight_2DQLQ centerItems_222KX">
                   <a href="#" className="metaMenu_3AKjk menuLink_1h9ZN" data-test="more">

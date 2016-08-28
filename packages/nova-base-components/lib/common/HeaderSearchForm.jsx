@@ -6,6 +6,7 @@ import {Modal, Dropdown, MenuItem} from 'react-bootstrap';
 import {ContextPasser} from "meteor/nova:core";
 import {LinkContainer} from 'react-router-bootstrap';
 import Users from 'meteor/nova:users';
+import {Messages} from "meteor/nova:core";
 
 const keyCodes = {
     ENTER: 13,
@@ -110,8 +111,9 @@ class HeaderSearchForm extends Component {
     }
 
     onToggleBar() {
-        this.props.callbackParent(this.state.searching);
-        this.setState({searching: !this.state.searching});
+        let search = !this.state.searching
+        this.context.messages.isSearch(search);
+        this.setState({searching: search});
     }
 
     renderBar() {
@@ -204,6 +206,10 @@ class HeaderSearchForm extends Component {
         )
     }
 }
+
+HeaderSearchForm.contextTypes = {
+    messages: React.PropTypes.object
+};
 
 module.exports = HeaderSearchForm;
 export default HeaderSearchForm;

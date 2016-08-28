@@ -1,23 +1,30 @@
+import React, {PropTypes, Component} from 'react';
+
 const Messages = {
   // Local (client-only) collection
   collection: new Meteor.Collection(null),
 
   flash(content, type) {
-    type = (typeof type === 'undefined') ? 'error': type;
+    type = (typeof type === 'undefined') ? 'error' : type;
     // Store errors in the local collection
-    this.collection.insert({content:content, type:type, seen: false, show:true});
+    this.collection.insert({content: content, type: type, seen: false, show: true});
+  },
+
+  layout: Component,
+  isSearch(search){
+    this.layout.setState({isSearching: search})
   },
 
   markAsSeen(messageId) {
-    this.collection.update(messageId, {$set: {seen:true}});
+    this.collection.update(messageId, {$set: {seen: true}});
   },
 
   clear(messageId) {
-    this.collection.update(messageId, {$set: {show:false}});
+    this.collection.update(messageId, {$set: {show: false}});
   },
 
   clearSeen() {
-    this.collection.update({seen:true}, {$set: {show:false}}, {multi:true});
+    this.collection.update({seen: true}, {$set: {show: false}}, {multi: true});
   }
 };
 
