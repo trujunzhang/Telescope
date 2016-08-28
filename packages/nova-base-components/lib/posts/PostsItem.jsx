@@ -109,7 +109,7 @@ class PostsItem extends Component {
         //if (post.sticky)
         //  postClass += " posts-sticky";
 
-        console.log(post)
+         console.log(post)
         // console.log(post.user)
 
         return (
@@ -124,7 +124,7 @@ class PostsItem extends Component {
                   <div className="content_3oLx4">
                       <span className="title_2p9fd featured_2W7jd default_tBeAo base_3CbW2">{post.title}</span>
                       <span className="text_3Wjo0 subtle_1BWOT base_3CbW2">
-                          {post.excerpt}
+                          {post.htmlBody}
                       </span>
                   </div>
               </a>
