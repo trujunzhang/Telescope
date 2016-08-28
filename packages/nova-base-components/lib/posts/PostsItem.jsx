@@ -35,19 +35,19 @@ class PostsItem extends Component {
 
     renderActionButtons() {
         return (
-          <div class="meta_2lIV-">
-              <div class="actionButtons_2mJsw">
-                  <button class="button_2I1re smallSize_1da-r secondaryText_PM80d simpleVariant_1Nl54 button_2n20W"
+          <div className="meta_2lIV-">
+              <div className="actionButtons_2mJsw">
+                  <button className="button_2I1re smallSize_1da-r secondaryText_PM80d simpleVariant_1Nl54 button_2n20W"
                           rel="vote-button">
-                      <div class="buttonContainer_wTYxi">
-                          <div class="postVoteArrow_2xABl"></div>
+                      <div className="buttonContainer_wTYxi">
+                          <div className="postVoteArrow_2xABl"></div>
                           270
                       </div>
                   </button>
                   <a
-                    class="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
+                    className="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
                     href="/tech/ui-temple">
-                      <div class="buttonContainer_wTYxi">
+                      <div className="buttonContainer_wTYxi">
                     <span>
                         <svg width="12" height="11" viewBox="0 0 12 11"
                              xmlns="http://www.w3.org/2000/svg">
@@ -60,11 +60,11 @@ class PostsItem extends Component {
                           13
                       </div>
                   </a>
-                  <div class="additionalActionButtons_BoErh">
+                  <div className="additionalActionButtons_BoErh">
                       <a
-                        class="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
+                        className="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
                         href="#" rel="save-button" label="save">
-                          <div class="buttonContainer_wTYxi">
+                          <div className="buttonContainer_wTYxi">
                         <span>
                             <span>
                                 <svg width="13" height="10" viewBox="0 0 13 10"
@@ -80,9 +80,9 @@ class PostsItem extends Component {
                           </div>
                       </a>
                       <a
-                        class="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
+                        className="button_2I1re smallSize_1da-r secondaryText_PM80d subtleVariant_tlhj3 simpleVariant_1Nl54 button_2n20W"
                         target="_blank" href="/r/a7b2435b0265fd/74101">
-                          <div class="buttonContainer_wTYxi">
+                          <div className="buttonContainer_wTYxi">
                         <span>
                         <svg width="10" height="10" viewBox="0 0 10 10"
                              xmlns="http://www.w3.org/2000/svg">
@@ -96,21 +96,21 @@ class PostsItem extends Component {
                       </a>
                   </div>
               </div>
-              <div class="annotations_X03xJ annotations_2Ditj">
-                  <div class="secondaryText_PM80d subtle_1BWOT base_3CbW2">
-                      <span style="font-style: normal; font-weight: normal;">🏆</span>
+              <div className="annotations_X03xJ annotations_2Ditj">
+                  <div className="secondaryText_PM80d subtle_1BWOT base_3CbW2">
+                      <span >🏆</span>
                       #1 in Tech
                   </div>
               </div>
-              <div class="associations_2dmvY">
+              <div className="associations_2dmvY">
                   <div>
                       <a
-                        class="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
+                        className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
                         href="/topics/web">
-                          <div class="buttonContainer_wTYxi">Web</div>
+                          <div className="buttonContainer_wTYxi">Web</div>
                       </a>
-                      <a href="#" class="moreAssociations_28e7H"><span
-                        class="secondaryText_PM80d subtle_1BWOT base_3CbW2">
+                      <a href="#" className="moreAssociations_28e7H"><span
+                        className="secondaryText_PM80d subtle_1BWOT base_3CbW2">
                     +2
                 </span>
                       </a>
