@@ -502,4 +502,36 @@ a.button_2I1re:active, button.button_2I1re:active {
   fill: #999
 }
 
+// Load more
+.posts-load-more, .comments-load-more {
+  display: block;
+  text-align: center;
+  @include border;
+  @include border-radius;
+  font-size: $large-font;
+  padding: 10px 20px;
+  @include activeHover;
+  width: 100%;
+  background: $white;
+  color: $active-color;
+}
+
+.posts-load-more-loading {
+  padding: 21px 0;
+}
+
+.posts-load-more {
+  border: none;
+  padding: 0;
+  &:hover {
+    background: inherit;
+    color: inherit;
+    border: inherit;
+  }
+}
+
+.posts-no-results {
+  margin-top: $vmargin;
+}
+
 
