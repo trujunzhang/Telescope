@@ -12,17 +12,15 @@ class HeaderNavigation extends Component {
     constructor(props) {
         super(props);
         this.state = {
+
             subNavigationItems: [
-                {"href": "/tech", "title": "Tech"},
-                {"href": "/games", "title": "Games"},
-                {"href": "/podcasts", "title": "Podcasts"},
-                {"href": "/books", "title": "Books"},
-                //{"href": "/topics/bots", "title": "Bots"},
-                {"href": "/topics/developer-tools", "title": "Developer Tools"},
-                {"href": "/topics/photography-tools", "title": "Photography Tools"},
-                //{"href": "/topics/pokemon", "title": "Pokemon"},
-                //{"href": "/topics/slack", "title": "Slack"},
-                {"href": "/topics/wearables", "title": "Wearables"},
+                {"href": "/tech", "title": "Politics"},
+                {"href": "/games", "title": "Economy"},
+                {"href": "/podcasts", "title": "Foreign Affairs"},
+                {"href": "/books", "title": "Defence"},
+                {"href": "/topics/developer-tools", "title": "Education"},
+                {"href": "/topics/photography-tools", "title": "Healthcare"},
+                {"href": "/topics/wearables", "title": "Sustainability"},
             ]
         }
     }
