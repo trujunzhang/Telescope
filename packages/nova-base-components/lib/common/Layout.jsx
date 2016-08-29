@@ -17,8 +17,8 @@ class Layout extends Component {
         };
     }
 
-    closeDetail() {
-        this.context.messages.closePostPanel();
+    dismissCurrentPostPanel() {
+        this.context.messages.dismissPostPanel();
     }
 
     showDetail() {
@@ -34,7 +34,7 @@ class Layout extends Component {
             return (
               <div>
                   <div>postID</div>
-                  <button onClick={this.closeDetail()}>close Detail</button>
+                  <button onClick={this.dismissCurrentPostPanel()}>close Detail</button>
                   <button onClick={this.showDetail()}>show Detail</button>
               </div>
             )

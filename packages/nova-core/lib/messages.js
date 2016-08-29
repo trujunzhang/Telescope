@@ -24,7 +24,7 @@ const Messages = {
     this.layout.setState({currentPost: this.postDetailSet.current()});
   },
 
-  closePostPanel(){
+  dismissPostPanel(){
     this.postDetailSet.pop();
     this.layout.setState({currentPost: this.postDetailSet.current()});
   },
