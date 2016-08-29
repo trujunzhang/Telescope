@@ -53,6 +53,11 @@ body.categories-posts-show #unrouted-app-header + .page-main {
 @import "forms";
 @import "home";
 @import "posts";
+
+// posts single
+@import "PostsPopup";
+@import "PostsSingleHeader";
+
 @import "users";
 
 .new-post-button {
