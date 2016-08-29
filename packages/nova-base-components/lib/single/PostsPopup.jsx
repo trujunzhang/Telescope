@@ -5,7 +5,7 @@ import Categories from "meteor/nova:categories";
 const PostsPopup = () => {
 
     return (
-        <div></div>
+      <div>PostsPopup</div>
     )
 }
 
