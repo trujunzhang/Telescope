@@ -1,5 +1,5 @@
 import React, {PropTypes, Component} from 'react';
-import PostDetailNavigation from "./postdetailnavigation.js";
+import PostDetailSet from "./postdetailset.js";
 
 const Messages = {
   // Local (client-only) collection
@@ -17,16 +17,16 @@ const Messages = {
     this.layout.setState({isSearching: search})
   },
 
-  postDetailNavigation: new PostDetailNavigation(),
+  postDetailSet: new PostDetailSet(),
 
-  pushPostDetail(postId){
-    this.postDetailNavigation.push(postId);
-    this.layout.setState({postDetail: this.postDetailNavigation.current()});
+  pushAndPostShow(postId){
+    this.postDetailSet.push(postId);
+    this.layout.setState({currentPost: this.postDetailSet.current()});
   },
 
-  closePostDetail(){
-    this.postDetailNavigation.pop();
-    this.layout.setState({postDetail: this.postDetailNavigation.current()});
+  closePostPanel(){
+    this.postDetailSet.pop();
+    this.layout.setState({currentPost: this.postDetailSet.current()});
   },
 
   markAsSeen(messageId) {

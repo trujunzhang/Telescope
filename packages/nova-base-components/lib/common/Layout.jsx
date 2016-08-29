@@ -11,26 +11,26 @@ class Layout extends Component {
         this.context.messages.layout = this;
         this.state = this.initialState = {
             isSearching: false,
-            postDetail: 123,
+            currentPost: 123,
             index: 0,
             ids: [1, 2, 3, 4, 5],
         };
     }
 
     closeDetail() {
-        this.context.messages.closePostDetail();
+        this.context.messages.closePostPanel();
     }
 
     showDetail() {
         let id = this.state.ids[(this.state.idex % this.state.ids.length)];
         this.setState({index: this.state.index + 1});
 
-        this.context.messages.pushPostDetail(id);
+        this.context.messages.pushAndPostShow(id);
     }
 
-    renderPostDetail() {
-        console.log("postdetail: " + this.state.postDetail);
-        if (this.state.postDetail != null) {
+    renderCurrentPost() {
+        console.log("current post: " + this.state.currentPost);
+        if (this.state.currentPost != null) {
             return (
               <div>
                   <div>postID</div>
@@ -55,7 +55,7 @@ class Layout extends Component {
               </div>
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
-              {this.renderPostDetail()}
+              {this.renderCurrentPost()}
               <div >
                   <div className="constraintWidth_ZyYbM container_3aBgK">
                       <FlashContainer component={Telescope.components.FlashMessages}/>
