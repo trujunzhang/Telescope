@@ -17,7 +17,6 @@ class PostDetailSet {
       return null;
     }
     this.stack.pop();
-    console.log("pop:" + this.stack);
     var last = this.stack[this.stack.length - 1];
     return last;
   }
