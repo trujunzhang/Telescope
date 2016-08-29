@@ -15,6 +15,9 @@ class PostDetailNavigation {
   }
 
   current() {
+    if (this.stack.length == 0)
+      return null;
+
     var postDetail = this.stack.shift();
     return postDetail;
   }

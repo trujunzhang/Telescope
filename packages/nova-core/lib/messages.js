@@ -16,10 +16,16 @@ const Messages = {
     this.layout.setState({isSearching: search})
   },
 
-  postDetailNavigation: new PostDetailNavigation({name: 'wanghao'}),
-  pushPostDetail(postID){
-    this.postDetailNavigation.properties.name = postID;
-    this.layout.setState({name: this.postDetailNavigation.properties.name});
+  postDetailNavigation: new PostDetailNavigation(),
+
+  pushPostDetail(postId){
+    this.postDetailNavigation.push(postId);
+    this.layout.setState({postDetail: this.postDetailNavigation.current()});
+  },
+
+  closePostDetail(){
+    this.postDetailNavigation.pop();
+    this.layout.setState({postDetail: this.postDetailNavigation.current()});
   },
 
   markAsSeen(messageId) {
