@@ -5,9 +5,7 @@ import Categories from "meteor/nova:categories";
 const PostSingleHeader = () => {
 
     return (
-      <div>
-
-      </div>
+        <div></div>
     )
 }
 
