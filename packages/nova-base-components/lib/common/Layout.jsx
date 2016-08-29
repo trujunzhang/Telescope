@@ -21,7 +21,7 @@ class Layout extends Component {
         this.context.messages.dismissPostPanel();
     }
 
-    showDetail() {
+    showCurrentPostPanel() {
         let id = this.state.ids[(this.state.idex % this.state.ids.length)];
         this.setState({index: this.state.index + 1});
 
@@ -34,8 +34,8 @@ class Layout extends Component {
             return (
               <div>
                   <div>postID</div>
-                  <button onClick={this.dismissCurrentPostPanel()}>close Detail</button>
-                  <button onClick={this.showDetail()}>show Detail</button>
+                  <button onClick={this.dismissCurrentPostPanel}>show Detail</button>
+                  <button onClick={this.showCurrentPostPanel}>show Detail</button>
               </div>
             )
         }
