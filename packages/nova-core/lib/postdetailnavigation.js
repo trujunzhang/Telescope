@@ -1,10 +1,20 @@
 class PostDetailNavigation {
-  constructor(properties) {
-    this.properties = properties;
+  constructor() {
+    this.stack = [];
   }
 
-  toObject() {
-    return this.properties;
+  push(postDetail) {
+    this.stack.push(postDetail);
+  }
+
+  pop() {
+    var postDetail = this.stack.pop();
+    return postDetail;
+  }
+
+  current() {
+    var postDetail = this.stack.shift();
+    return postDetail;
   }
 }
 
