@@ -101,6 +101,10 @@ class PostsItem extends Component {
         )
     }
 
+    popupDetail() {
+
+    }
+
     render() {
 
         const post = this.props.post;
@@ -111,7 +115,7 @@ class PostsItem extends Component {
         return (
           <div className="postItem_2pV9v" rel="post-item-#74101">
 
-              <a className="link_3fUGJ" href="/tech/ui-temple">
+              <a className="link_3fUGJ" onClick={this.popupDetail.bind(this)}>
                   <div className="post-thumbnail thumbnail_JX64A thumbnail">
                       <div className="container_22rD3 thumbnail">
                           {post.thumbnailUrl ? <Telescope.components.PostsThumbnail post={post}/> : null}
