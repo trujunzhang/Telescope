@@ -49,8 +49,8 @@ Telescope.registerComponent("PostsCommentsThread",  require('./posts/PostsCommen
 
 // posts single
 
-Telescope.registerComponent("PostsPopup",           require('./posts/PostsPopup.jsx'));
-Telescope.registerComponent("PostsSingleHeader",    require('./posts/PostsSingleHeader.jsx'));
+Telescope.registerComponent("PostsPopup",           require('./single/PostsPopup.jsx'));
+Telescope.registerComponent("PostsSingleHeader",    require('./single/PostsSingleHeader.jsx'));
 
 // comments
 
