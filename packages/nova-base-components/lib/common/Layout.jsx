@@ -28,15 +28,24 @@ class Layout extends Component {
         this.context.messages.pushAndPostShow(id);
     }
 
-    renderCurrentPost() {
-        console.log("current post: " + this.state.currentPost);
+    //renderSinglePost() { // For test
+    //    console.log("current post: " + this.state.currentPost);
+    //    if (this.state.currentPost != null) {
+    //        return (
+    //          <div>
+    //              <div>{this.state.currentPost}</div>
+    //              <button onClick={this.showCurrentPostPanel.bind(this)}>show current post panel</button>
+    //              <button onClick={this.dismissCurrentPostPanel.bind(this)}>dismiss current post panel</button>
+    //          </div>
+    //        )
+    //    }
+    //    return null;
+    //}
+
+    renderSinglePost() {
         if (this.state.currentPost != null) {
             return (
-              <div>
-                  <div>{this.state.currentPost}</div>
-                  <button onClick={this.showCurrentPostPanel.bind(this)}>show current post panel</button>
-                  <button onClick={this.dismissCurrentPostPanel.bind(this)}>dismiss current post panel</button>
-              </div>
+              <Telescope.components.PostsPopup />
             )
         }
         return null;
@@ -55,7 +64,7 @@ class Layout extends Component {
               </div>
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
-              {this.renderCurrentPost()}
+              {this.renderSinglePost()}
               <div >
                   <div className="constraintWidth_ZyYbM container_3aBgK">
                       <FlashContainer component={Telescope.components.FlashMessages}/>
