@@ -10,7 +10,8 @@ class Layout extends Component {
     componentWillMount() {
         this.context.messages.layout = this;
         this.state = this.initialState = {
-            isSearching: false
+            isSearching: false,
+            name: 'wh',
         };
     }
 
@@ -27,6 +28,7 @@ class Layout extends Component {
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
 
               <div >
+                  <div>{this.state.name}</div>
                   <div className="constraintWidth_ZyYbM container_3aBgK">
                       <FlashContainer component={Telescope.components.FlashMessages}/>
                   </div>

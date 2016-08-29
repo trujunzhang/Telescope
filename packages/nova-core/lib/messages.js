@@ -1,4 +1,5 @@
 import React, {PropTypes, Component} from 'react';
+import PostDetailNavigation from "./postdetailnavigation.js";
 
 const Messages = {
   // Local (client-only) collection
@@ -13,6 +14,12 @@ const Messages = {
   layout: Component,
   isSearch(search){
     this.layout.setState({isSearching: search})
+  },
+
+  postDetailNavigation: new PostDetailNavigation({name: 'wanghao'}),
+  pushPostDetail(postID){
+    this.postDetailNavigation.properties.name = postID;
+    this.layout.setState({name: this.postDetailNavigation.properties.name});
   },
 
   markAsSeen(messageId) {
