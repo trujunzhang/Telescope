@@ -1,3 +1,5 @@
+import PostDetail from "./postdetail.js";
+
 class PostDetailNavigation {
   constructor() {
     this.stack = [];
