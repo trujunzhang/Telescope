@@ -36,6 +36,11 @@ body.categories-posts-show #unrouted-app-header + .page-main {
   flex: 1
 }
 
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: content-box;
+}
+
 @import "breakpoints";
 @import "colors";
 @import "variables";
