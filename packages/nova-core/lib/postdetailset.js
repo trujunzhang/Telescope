@@ -21,9 +21,12 @@ class PostDetailSet {
       this.stack.pop();
       this.isPopPage = false;
     }
-    var postDetail = this.stack.pop();
+    if (this.stack.length == 0) {
+      return null;
+    }
     console.log("pop:" + this.stack);
-    return postDetail;
+    var last = this.stack[this.stack.length - 1];
+    return last;
   }
 
   fetchPostPage(postId) {
