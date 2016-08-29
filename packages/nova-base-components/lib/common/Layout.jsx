@@ -13,7 +13,7 @@ class Layout extends Component {
             isSearching: false,
             currentPost: 123,
             index: 0,
-            ids: [1, 2, 3, 4, 5],
+            ids: [1, 2, 3, 4, 5, 6, 7, 8, 9],
         };
     }
 
@@ -22,7 +22,7 @@ class Layout extends Component {
     }
 
     showCurrentPostPanel() {
-        let id = this.state.ids[(this.state.idex % this.state.ids.length)];
+        let id = this.state.ids[(this.state.index )];
         this.setState({index: this.state.index + 1});
 
         this.context.messages.pushAndPostShow(id);
@@ -33,9 +33,9 @@ class Layout extends Component {
         if (this.state.currentPost != null) {
             return (
               <div>
-                  <div>postID</div>
-                  <button onClick={this.dismissCurrentPostPanel.bind(this)}>dismiss current post panel</button>
+                  <div>{this.state.currentPost}</div>
                   <button onClick={this.showCurrentPostPanel.bind(this)}>show current post panel</button>
+                  <button onClick={this.dismissCurrentPostPanel.bind(this)}>dismiss current post panel</button>
               </div>
             )
         }
