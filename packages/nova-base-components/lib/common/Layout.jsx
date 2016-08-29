@@ -34,8 +34,8 @@ class Layout extends Component {
             return (
               <div>
                   <div>postID</div>
-                  <button onClick={this.dismissCurrentPostPanel}>show Detail</button>
-                  <button onClick={this.showCurrentPostPanel}>show Detail</button>
+                  <button onClick={this.dismissCurrentPostPanel.bind(this)}>show Detail</button>
+                  <button onClick={this.showCurrentPostPanel.bind(this)}>show Detail</button>
               </div>
             )
         }
