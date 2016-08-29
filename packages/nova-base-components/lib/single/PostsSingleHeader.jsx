@@ -2,14 +2,14 @@ import React from 'react';
 import {ListContainer} from "meteor/utilities:react-list-container";
 import Categories from "meteor/nova:categories";
 
-const PostSingleHeader = () => {
+const PostsSingleHeader = () => {
 
     return (
         <div></div>
     )
 }
 
-PostSingleHeader.displayName = "PostSingleHeader";
+PostsSingleHeader.displayName = "PostsSingleHeader";
 
-module.exports = PostSingleHeader;
-export default PostSingleHeader;
+module.exports = PostsSingleHeader;
+export default PostsSingleHeader;
