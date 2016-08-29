@@ -105,11 +105,7 @@ class PostsItem extends Component {
 
         const post = this.props.post;
 
-        //let postClass = "posts-item";
-        //if (post.sticky)
-        //  postClass += " posts-sticky";
-
-         //console.log(post)
+        // console.log(post)
         // console.log(post.user)
 
         return (
