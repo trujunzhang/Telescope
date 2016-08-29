@@ -1,6 +1,6 @@
 import PostDetail from "./postdetail.js";
 
-class PostDetailNavigation {
+class PostDetailSet {
   constructor() {
     this.stack = [];
   }
@@ -23,4 +23,4 @@ class PostDetailNavigation {
   }
 }
 
-export default PostDetailNavigation;
+export default PostDetailSet;

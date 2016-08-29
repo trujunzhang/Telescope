@@ -112,7 +112,7 @@ class HeaderSearchForm extends Component {
 
     onToggleBar() {
         let search = !this.state.searching
-        this.context.messages.isSearch(search);
+        this.context.messages.isSearching(search);
         this.setState({searching: search});
     }
 

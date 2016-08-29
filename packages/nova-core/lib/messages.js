@@ -12,7 +12,8 @@ const Messages = {
   },
 
   layout: Component,
-  isSearch(search){
+
+  isSearching(search){
     this.layout.setState({isSearching: search})
   },
 
