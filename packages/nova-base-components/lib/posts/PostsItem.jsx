@@ -6,8 +6,16 @@ import {ModalTrigger} from "meteor/nova:core";
 import {Link} from 'react-router';
 import Posts from "meteor/nova:posts";
 import Users from 'meteor/nova:users';
-import { withRouter } from 'react-router'
+import {withRouter} from 'react-router'
 import HtmlToReact from 'html-to-react';
+
+const delay = (function () {
+    var timer = 0;
+    return function (callback, ms) {
+        clearTimeout(timer);
+        timer = setTimeout(callback, ms);
+    };
+})();
 
 class PostsItem extends Component {
 
@@ -102,7 +110,14 @@ class PostsItem extends Component {
     }
 
     popupDetail() {
+        const post = this.props.post;
+        const query = {};
+        const path = "/" + post.slug;
 
+        const router = this.props.router;
+        delay(() => {
+            router.push({pathname: path});
+        }, 700);
     }
 
     render() {
@@ -111,8 +126,6 @@ class PostsItem extends Component {
 
         // console.log(post)
         // console.log(post.user)
-
-        const router = this.props.router;
 
         return (
           <div className="postItem_2pV9v" rel="post-item-#74101">
@@ -143,7 +156,6 @@ PostsItem.propTypes = {
 PostsItem.contextTypes = {
     currentUser: React.PropTypes.object
 };
-
 
 module.exports = withRouter(PostsItem);
 export default withRouter(PostsItem);
