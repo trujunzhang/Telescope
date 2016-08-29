@@ -12,14 +12,31 @@ class Layout extends Component {
         this.state = this.initialState = {
             isSearching: false,
             postDetail: 123,
-            name: 'wh',
+            index: 0,
+            ids: [1, 2, 3, 4, 5],
         };
     }
 
+    closeDetail() {
+        this.context.messages.closePostDetail();
+    }
+
+    showDetail() {
+        let id = this.state.ids[(this.state.idex % this.state.ids.length)];
+        this.setState({index: this.state.index + 1});
+
+        this.context.messages.pushPostDetail(id);
+    }
+
     renderPostDetail() {
+        console.log("postdetail: " + this.state.postDetail);
         if (this.state.postDetail != null) {
             return (
-              <div>postID</div>
+              <div>
+                  <div>postID</div>
+                  <button onClick={this.closeDetail()}>close Detail</button>
+                  <button onClick={this.showDetail()}>show Detail</button>
+              </div>
             )
         }
         return null;
@@ -35,11 +52,10 @@ class Layout extends Component {
 
               <div>
                   <Telescope.components.Header {...this.props} />
-                  {this.renderPostDetail()}
               </div>
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
-
+              {this.renderPostDetail()}
               <div >
                   <div className="constraintWidth_ZyYbM container_3aBgK">
                       <FlashContainer component={Telescope.components.FlashMessages}/>

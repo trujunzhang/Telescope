@@ -109,7 +109,7 @@ class PostsItem extends Component {
         //if (post.sticky)
         //  postClass += " posts-sticky";
 
-         console.log(post)
+         //console.log(post)
         // console.log(post.user)
 
         return (
