@@ -11,8 +11,18 @@ class Layout extends Component {
         this.context.messages.layout = this;
         this.state = this.initialState = {
             isSearching: false,
+            postDetail: 123,
             name: 'wh',
         };
+    }
+
+    renderPostDetail() {
+        if (this.state.postDetail != null) {
+            return (
+              <div>postID</div>
+            )
+        }
+        return null;
     }
 
     render() {
@@ -23,12 +33,14 @@ class Layout extends Component {
 
               <Telescope.components.UsersProfileCheck {...this.props} />
 
-              <Telescope.components.Header {...this.props} />
+              <div>
+                  <Telescope.components.Header {...this.props} />
+                  {this.renderPostDetail()}
+              </div>
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
 
               <div >
-                  <div>{this.state.name}</div>
                   <div className="constraintWidth_ZyYbM container_3aBgK">
                       <FlashContainer component={Telescope.components.FlashMessages}/>
                   </div>
