@@ -1,4 +1,4 @@
-
+// posts popup container
 .overlay_1AkSl {
   background: hsla(0, 0%, 97%, .8);
   bottom: 0;
@@ -39,6 +39,7 @@
   display: none
 }
 
+// Close buttons
 .closeDesktop_XydFN {
   cursor: pointer;
   position: absolute;
@@ -101,4 +102,71 @@
 
 .closeMobile_15z3i:hover {
   opacity: .3
+}
+
+// content container
+
+.content_3X9xi {
+  margin: 0 auto
+}
+
+@media (min-width: 1200px) {
+  .content_3X9xi {
+    max-width: 1072px
+  }
+}
+
+.container_2uJxj {
+  width: 100%;
+  margin: 0 auto
+}
+
+@media (min-width: 1200px) {
+  .container_2uJxj {
+    margin: 0 auto;
+    width: auto;
+    max-width: 1072px
+  }
+}
+
+@media (min-width: 1200px) {
+  .postSection_1iIbk {
+    margin-top: 30px
+  }
+
+  .modal-spotlight .postSection_1iIbk {
+    margin-top: 0
+  }
+}
+
+.sectionContent_21Amp {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #f2f2f2
+}
+
+.body_1a08C {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px 20px;
+  margin-bottom: 20px
+}
+
+@media (max-width: 768px) {
+  .body_1a08C {
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column;
+    margin-bottom: 20px
+  }
+}
+
+@media (min-width: 769px) {
+  .body_1a08C {
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row
+  }
 }
