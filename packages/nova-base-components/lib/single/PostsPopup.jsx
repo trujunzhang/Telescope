@@ -30,6 +30,7 @@ const PostsPopup = () => {
                   <section className="postSection_1iIbk">
                       <div className="sectionContent_21Amp">
 
+                          <Telescope.components.PostsSingleHeader />
 
                           <div className="constraintWidth_ZyYbM body_1a08C">
 
