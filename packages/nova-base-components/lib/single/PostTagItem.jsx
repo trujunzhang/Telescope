@@ -20,14 +20,14 @@ const PostTagItem = () => {
     return (
       <main className="main_3lfDa">
           <div className="topics_39_B0" rel="topics-list">
-              {this.state.subNavigationItems.map((menu, key) => {
+              {subNavigationItems.map((menu, key) => {
                   return (
                     <div className="topicWrap_2Uvaj" rel="topic-item">
                         <span>
                             <a
                               className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
                               href="/topics/iphone">
-                                <div className="buttonContainer_wTYxi">{menu}</div>
+                                <div className="buttonContainer_wTYxi">{menu.title}</div>
                             </a>
                         </span>
                     </div>
