@@ -33,8 +33,7 @@ const PostsPopup = () => {
                           <Telescope.components.PostsSingleHeader />
 
                           <div className="constraintWidth_ZyYbM body_1a08C">
-
-
+                              <Telescope.components.PostDetail/>
                           </div>
 
                       </div>

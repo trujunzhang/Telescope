@@ -2,7 +2,13 @@ import React from 'react';
 import {ListContainer} from "meteor/utilities:react-list-container";
 import Categories from "meteor/nova:categories";
 
-const PostDetail = () => {
+const PostTagItem = () => {
+
+    const subNavigationItems = [
+        {"href": "/tech", "title": "iPhone"},
+        {"href": "/games", "title": "Home"},
+        {"href": "/podcasts", "title": "Furniture"},
+    ]
 
     return (
       <main className="main_3lfDa">
@@ -27,7 +33,7 @@ const PostDetail = () => {
         <span>
           <a className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
              href="/topics/furniture">
-            <div className="buttonContainer_wTYxi">Furniture</div>
+            <div className="buttonContainer_wTYxi"></div>
           </a>
         </span>
               </div>
@@ -37,7 +43,7 @@ const PostDetail = () => {
     )
 }
 
-PostDetail.displayName = "PostDetail";
+PostTagItem.displayName = "PostTagItem";
 
-module.exports = PostDetail;
-export default PostDetail;
+module.exports = PostTagItem;
+export default PostTagItem;
