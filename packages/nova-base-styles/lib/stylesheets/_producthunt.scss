@@ -156,6 +156,16 @@
   }
 }
 
+.solidVariant_2wWrf {
+  /* color: #fff; */
+  fill: #fff;
+}
+
+.solidVariant_2wWrf.active_2heMV {
+  color: #fff;
+  fill: #fff
+}
+
 .orangeSolidColor_B-2gO, .solidVariant_2wWrf.active_2heMV {
   background: #da552f;
   border-color: #da552f
@@ -419,4 +429,16 @@
   margin: 0 0 0 5px
 }
 
+// share buttons
+
+.shareButton_1occ0 {
+  width: 60px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1
+}
+
+.shareButton_1occ0 + .shareButton_1occ0 {
+  margin-left: 10px
+}
 
