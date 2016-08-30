@@ -31,7 +31,7 @@ const PostsPopup = () => {
                       <div className="sectionContent_21Amp">
 
 
-                          <div className="constraintWidth_ZyYbM body_1a08C" style="max-width: 1100px;">
+                          <div className="constraintWidth_ZyYbM body_1a08C">
 
 
                           </div>
@@ -40,7 +40,7 @@ const PostsPopup = () => {
                   </section>
                   <section className="popularTodaySection_30n6J">
                       <div className="sectionContent_21Amp">
-                          
+
 
                       </div>
                   </section>
