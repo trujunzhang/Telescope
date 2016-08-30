@@ -22,6 +22,22 @@ const PostDetail = () => {
                   </div>
               </div>
           </section>
+          <section className="container_3tEOd">
+              <div>
+                  <p>
+                      The Supreme Court’s affirmation on Saturday of its 2014 view in cases related to dowry harassment
+                      or death — that the police should not arrest the husband and his close relations until it is
+                      satisfied that the complaint is genuine — disturbs its reputation for effectively aiding those in
+                      need of justice.\n\nIn 1983, our law-makers strengthened Section 498A of the Dowry Prohibition
+                      Act, 1961 to include the automatic arrest of husband and his immediate family in case of dowry
+                      deaths or complaints of violence.\n\nReports of young women being burned to death for their
+                      parents’ inability to furnish the demanded dowry by avaricious in-laws, or subjected to gruesome
+                      domestic violence, had filled the media in the intervening years. The society had mounted a
+                      massive campaign to fight the evil of bride-burning.\n\nFollowing complaints that the law is being
+                      misused by some women, the Supreme Court is now, in effect,
+                  </p>
+              </div>
+          </section>
       </main>
     )
 }
