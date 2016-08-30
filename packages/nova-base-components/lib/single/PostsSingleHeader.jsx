@@ -12,7 +12,8 @@ const PostsSingleHeader = () => {
 
                       <div className="info_F11MZ">
                           <div className="headlineContainer_3dPf_">
-                              <h1 className="headline_azIav inverse_1CN6F base_3CbW2">Homee v2</h1>
+                              <h1 className="headline_azIav inverse_1CN6F base_3CbW2">Reclaiming Lost Childhoods By
+                                  Rethinking Rehabilitation </h1>
                           </div>
                           <div className="actions_vQA0Z" data-test="post-actions">
                                 <span className="comboButton_1rStc tech_25H3R">
