@@ -40,7 +40,7 @@ const PostDetail = () => {
               </div>
           </section>
           {/*post's comments*/}
-
+          <Telescope.components.PostsCommentsThread document={post} currentUser={currentUser}/>
       </main>
     )
 }
