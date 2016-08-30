@@ -29,10 +29,13 @@ const PostsPopup = () => {
               <div className="container_2uJxj">
                   <section className="postSection_1iIbk">
                       <div className="sectionContent_21Amp">
-
-                          <Telescope.components.PostsSingleHeader />
-
+                          {/* Top top */}
+                          <div>
+                              {/*header block*/}
+                              <Telescope.components.PostsSingleHeader />
+                          </div>
                           <div className="constraintWidth_ZyYbM body_1a08C">
+                              {/*middle left*/}
                               <Telescope.components.PostDetail/>
                           </div>
 

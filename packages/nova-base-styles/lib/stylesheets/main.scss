@@ -59,8 +59,9 @@ body.categories-posts-show #unrouted-app-header + .page-main {
 @import "home";
 @import "posts";
 
-@import "PostsPopup";
-@import "PostsSingleHeader";
+@import "postspopup";
+@import "postssingleheader";
+@import "postdetail";
 
 @import "users";
 
