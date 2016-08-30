@@ -20,7 +20,9 @@ const PostsPopup = () => {
                     </svg>
                 </span>
             </a>
-            <div className="content_3X9xi"></div>
+            <div className="content_3X9xi">
+
+            </div>
         </div>
     )
 }
