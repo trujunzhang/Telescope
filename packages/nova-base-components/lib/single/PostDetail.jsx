@@ -13,7 +13,7 @@ const PostDetail = () => {
               <div>
                   <div className="canvasWrapper_3pQxU">
                       <div className="canvas_3tuA5">
-                          <div className="container_22rD3" style="height: 315px; width: 177.325px;">
+                          <div className="container_22rD3">
                               <img className="placeholder_E_0qw" height="315"
                                    src="http://www.dailypioneer.com/uploads/main/cl_story_image/T330_8868_Untitled-5.gif"
                                    width="177.32517482517483"/>
