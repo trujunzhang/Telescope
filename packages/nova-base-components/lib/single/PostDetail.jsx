@@ -22,6 +22,7 @@ const PostDetail = () => {
                   </div>
               </div>
           </section>
+          {/*post's content*/}
           <section className="container_3tEOd">
               <div>
                   <p>
@@ -38,6 +39,8 @@ const PostDetail = () => {
                   </p>
               </div>
           </section>
+          {/*post's comments*/}
+
       </main>
     )
 }

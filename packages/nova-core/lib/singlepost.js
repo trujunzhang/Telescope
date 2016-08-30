@@ -1,7 +1,7 @@
-class PostSingle {
+class SinglePost {
   constructor(postID) {
     this.postID = postID;
   }
 }
 
-export default PostSingle;
+export default SinglePost;
