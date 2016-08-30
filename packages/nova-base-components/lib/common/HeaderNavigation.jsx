@@ -36,7 +36,7 @@ class HeaderNavigation extends Component {
                       {this.state.subNavigationItems.map((menu, key) => {
                           return (
                             <li key={key}><a className="item_1k3Lx" href="{menu.href}">{menu.title}</a></li>
-                          );
+                          )
                       })}
                       <li>
                           <a className="all_P8Pm- item_1k3Lx secondaryText_PM80d default_tBeAo base_3CbW2"

@@ -1,4 +1,4 @@
-import PostDetail from "./postdetail.js";
+import PostDetail from "./postsingle.js";
 
 class PostDetailSet {
   constructor() {

@@ -5,39 +5,34 @@ import Categories from "meteor/nova:categories";
 const PostTagItem = () => {
 
     const subNavigationItems = [
-        {"href": "/tech", "title": "iPhone"},
-        {"href": "/games", "title": "Home"},
-        {"href": "/podcasts", "title": "Furniture"},
-    ]
+        {
+            "href": "/tech",
+            "title": "iPhonexxx"
+        }, {
+            "href": "/games",
+            "title": "Home"
+        }, {
+            "href": "/podcasts",
+            "title": "Furniture"
+        }
+    ];
 
     return (
       <main className="main_3lfDa">
           <div className="topics_39_B0" rel="topics-list">
-              <div className="topicWrap_2Uvaj" rel="topic-item">
-        <span>
-          <a className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
-             href="/topics/iphone">
-            <div className="buttonContainer_wTYxi">iPhone</div>
-          </a>
-        </span>
-              </div>
-              <div className="topicWrap_2Uvaj" rel="topic-item">
-        <span>
-          <a className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
-             href="/topics/home">
-            <div className="buttonContainer_wTYxi">Home</div>
-          </a>
-        </span>
-              </div>
-              <div className="topicWrap_2Uvaj" rel="topic-item">
-        <span>
-          <a className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
-             href="/topics/furniture">
-            <div className="buttonContainer_wTYxi"></div>
-          </a>
-        </span>
-              </div>
-
+              {this.state.subNavigationItems.map((menu, key) => {
+                  return (
+                    <div className="topicWrap_2Uvaj" rel="topic-item">
+                        <span>
+                            <a
+                              className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
+                              href="/topics/iphone">
+                                <div className="buttonContainer_wTYxi">{menu}</div>
+                            </a>
+                        </span>
+                    </div>
+                  )
+              })}
           </div>
       </main>
     )

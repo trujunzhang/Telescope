@@ -1,7 +1,7 @@
-class PostDetail {
+class PostSingle {
   constructor(postID) {
     this.postID = postID;
   }
 }
 
-export default PostDetail;
+export default PostSingle;

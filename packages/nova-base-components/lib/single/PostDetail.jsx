@@ -6,33 +6,7 @@ const PostDetail = () => {
 
     return (
       <main className="main_3lfDa">
-          <div className="topics_39_B0" rel="topics-list">
-              <div className="topicWrap_2Uvaj" rel="topic-item">
-        <span>
-          <a className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
-             href="/topics/iphone">
-            <div className="buttonContainer_wTYxi">iPhone</div>
-          </a>
-        </span>
-              </div>
-              <div className="topicWrap_2Uvaj" rel="topic-item">
-        <span>
-          <a className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
-             href="/topics/home">
-            <div className="buttonContainer_wTYxi">Home</div>
-          </a>
-        </span>
-              </div>
-              <div className="topicWrap_2Uvaj" rel="topic-item">
-        <span>
-          <a className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
-             href="/topics/furniture">
-            <div className="buttonContainer_wTYxi">Furniture</div>
-          </a>
-        </span>
-              </div>
-
-          </div>
+          <Telescope.components.PostTagItem/>
       </main>
     )
 }
